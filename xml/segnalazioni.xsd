@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    
+  <xs:element name="segnalazioni">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="segnalazione" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="testo_contributo" type="xs:string"/>
+              <xs:element name="autore_contributo" type="xs:string"/>
+              <xs:element name="testo_segnalazione" type="xs:string"/>
+            </xs:sequence>
+            <xs:attribute name="status" type="xs:string" use="required"/>
+            <xs:attribute name="id_contributo" type="xs:string" use="required"/>
+            <xs:attribute name="id_prodotto" type="xs:integer" use="required"/>
+            <xs:attribute name="autore_segnalazione" type="xs:string" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+    
+</xs:schema>

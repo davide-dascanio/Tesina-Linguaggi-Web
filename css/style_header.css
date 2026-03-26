@@ -1,0 +1,85 @@
+.header {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(80, 80, 100, 0.15);
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 1px;
+    height: 30px;
+    display: flex;
+    border-radius: 12px;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+}
+
+.header_menu {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.header_menu_item {
+    padding: 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    position: absolute;
+    left: 8px;
+    top: -8px;
+    width: 90px;
+    height: auto;
+}
+
+.logo-text {
+    position: absolute;
+    font-family: 'Segoe UI', 'sans-serif';
+    top: 19px;
+    left: 115px;
+    font-size: 24px;
+    color: #1a1a2e;
+    text-shadow: 1px 1px 0 #4a4a8a;
+}
+
+.header_menu_link {
+    font-family: 'Segoe UI', sans-serif;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    transition: background 0.25s ease;
+}
+
+.header_menu_link:hover {
+    background: rgba(30, 30, 60, 0.07);
+}
+
+.header_menu_link span {
+    margin-right: 5px;
+}
+
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+}
+
+.stile {
+    color: #2c2c3e;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 650;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: color 0.25s ease;
+}
+
+.stile:hover {
+    color: #4a4a8a;
+}
+
+#note {
+    color: #d63031;
+    font-weight: 600;
+}

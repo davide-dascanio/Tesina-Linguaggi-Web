@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogo_prodotti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="catalogo_prodotti.xsd">
+  <prodotto>
+    <id_prodotto>1</id_prodotto>
+    <nome>Samsung Crystal UHD 50</nome>
+    <descrizione>Smart TV dal design moderno, ideale per la visione di contenuti in alta definizione e per l’intrattenimento domestico quotidiano.</descrizione>
+    <prezzo>500.00</prezzo>
+    <tipologia>tv</tipologia>
+    <immagine>../img/tv_samsung_crystal_50.png</immagine>
+    <sconti_bonus>
+      <sconto_generico attivo="1">10</sconto_generico>
+      <sconto_personalizzato attivo="1">
+        <percentuale>10</percentuale>
+        <criterio tipo="reputazione">
+          <soglia>5</soglia>
+          <data_riferimento/>
+        </criterio>
+      </sconto_personalizzato>
+      <bonus_generico attivo="1">5</bonus_generico>
+      <bonus_personalizzato attivo="1">
+        <crediti>10</crediti>
+        <criterio tipo="mesi_registrato">
+          <soglia>1</soglia>
+          <data_riferimento/>
+        </criterio>
+      </bonus_personalizzato>
+    </sconti_bonus>
+    <domande>
+      <domanda id_prodotto="1" id_utente="3" segnalato="0">
+        <autore>paoloverdi@gmail.com</autore>
+        <testo>Questa TV è adatta per Netflix e YouTube?</testo>
+        <id_domanda>69b99b668a293</id_domanda>
+        <data>2026-03-17</data>
+        <ora>19:20:22</ora>
+        <utilita>
+          <valore id_utente="4" reputazione_Vot="5">1</valore>
+        </utilita>
+        <supporto>
+          <valore id_utente="4" reputazione_Vot="5">2</valore>
+        </supporto>
+        <risposte>
+          <risposta id_prodotto="1" id_utente="4" segnalato="0">
+            <id_risposta>69b99bed727c0</id_risposta>
+            <id_domanda>69b99b668a293</id_domanda>
+            <autore>giulianeri@gmail.com</autore>
+            <data>2026-03-17</data>
+            <ora>19:22:37</ora>
+            <testo>Sì, la TV supporta le principali app di streaming come Netflix e YouTube.</testo>
+            <utilita>
+              <valore id_utente="3" reputazione_Vot="1">2</valore>
+            </utilita>
+            <supporto>
+              <valore id_utente="3" reputazione_Vot="1">2</valore>
+            </supporto>
+          </risposta>
+          <risposta id_prodotto="1" id_utente="2" segnalato="0">
+            <id_risposta>69b9a5cdee524</id_risposta>
+            <id_domanda>69b99b668a293</id_domanda>
+            <autore>mariorossi@gmail.com</autore>
+            <data>2026-03-17</data>
+            <ora>20:04:45</ora>
+            <testo>Si è perfetta per questo. Inoltre è dotata di Wi-Fi integrato per una connessione veloce e stabile.</testo>
+            <utilita>
+              <valore id_utente="3" reputazione_Vot="1">3</valore>
+            </utilita>
+            <supporto>
+              <valore id_utente="3" reputazione_Vot="1">2</valore>
+            </supporto>
+          </risposta>
+        </risposte>
+      </domanda>
+      <domanda id_prodotto="1" id_utente="5" segnalato="0">
+        <autore>luca@gmail.com</autore>
+        <testo>La qualità dell’immagine è buona anche di notte?</testo>
+        <id_domanda>69b9a297acc10</id_domanda>
+        <data>2026-03-17</data>
+        <ora>19:51:03</ora>
+        <utilita>
+          <valore id_utente="3" reputazione_Vot="1">1</valore>
+        </utilita>
+        <supporto>
+          <valore id_utente="3" reputazione_Vot="1">2</valore>
+        </supporto>
+        <risposte>
+          <risposta id_prodotto="1" id_utente="2" segnalato="0">
+            <id_risposta>69b9a2f146551</id_risposta>
+            <id_domanda>69b9a297acc10</id_domanda>
+            <autore>mariorossi@gmail.com</autore>
+            <data>2026-03-17</data>
+            <ora>19:52:33</ora>
+            <testo>Offre una buona qualità d’immagine anche in ambienti poco illuminati.</testo>
+            <utilita>
+              <valore id_utente="4" reputazione_Vot="5">2</valore>
+              <valore id_utente="5" reputazione_Vot="4">3</valore>
+            </utilita>
+            <supporto>
+              <valore id_utente="4" reputazione_Vot="5">3</valore>
+              <valore id_utente="5" reputazione_Vot="4">2</valore>
+            </supporto>
+          </risposta>
+        </risposte>
+      </domanda>
+    </domande>
+    <recensioni>
+      <recensione id_prodotto="1" id_utente="3" segnalato="0">
+        <autore>paoloverdi@gmail.com</autore>
+        <testo>Qualità dell’immagine davvero ottima, facile da configurare. Consigliata!</testo>
+        <data>2026-03-17</data>
+        <ora>21:02:49</ora>
+        <id_recensione>69b9b369e653c</id_recensione>
+        <utilita>
+          <valore id_utente="5" reputazione_Vot="4">3</valore>
+        </utilita>
+        <supporto>
+          <valore id_utente="5" reputazione_Vot="4">1</valore>
+        </supporto>
+      </recensione>
+    </recensioni>
+  </prodotto>
+  <prodotto>
+    <id_prodotto>2</id_prodotto>
+    <nome>LG Smart TV LED 55</nome>
+    <descrizione>Televisore LED con funzionalità smart integrate, pensato per offrire un’esperienza visiva immersiva e un’interfaccia semplice da usare.</descrizione>
+    <prezzo>579.50</prezzo>
+    <tipologia>tv</tipologia>
+    <immagine>../img/tv_lg_55_smart.png</immagine>
+    <sconti_bonus>
+      <sconto_generico attivo="0">0</sconto_generico>
+      <sconto_personalizzato attivo="0">
+        <percentuale>0</percentuale>
+        <criterio tipo="nessuno">
+          <soglia>0</soglia>
+          <data_riferimento/>
+        </criterio>
+      </sconto_personalizzato>
+      <bonus_generico attivo="0">0</bonus_generico>
+      <bonus_personalizzato attivo="0">
+        <crediti>0</crediti>
+        <criterio tipo="nessuno">
+          <soglia>0</soglia>
+          <data_riferimento/>
+        </criterio>
+      </bonus_personalizzato>
+    </sconti_bonus>
+    <domande>
+      <domanda id_prodotto="2" id_utente="5" segnalato="1">
+        <autore>luca@gmail.com</autore>
+        <testo>Perché dovrei comprare da voi e non da un negozio serio?</testo>
+        <id_domanda>69bc32adc64b9</id_domanda>
+        <data>2026-03-19</data>
+        <ora>18:30:21</ora>
+        <utilita/>
+        <supporto/>
+        <risposte/>
+      </domanda>
+      <domanda id_prodotto="2" id_utente="3" segnalato="0">
+        <autore>paoloverdi@gmail.com</autore>
+        <testo>Perché dovrei comprare da voi e non da un negozio serio?</testo>
+        <id_domanda>69c17169563ea</id_domanda>
+        <data>2026-03-23</data>
+        <ora>17:59:21</ora>
+        <utilita/>
+        <supporto/>
+        <risposte/>
+      </domanda>
+    </domande>
+    <recensioni/>
+  </prodotto>
+  <prodotto>
+    <id_prodotto>3</id_prodotto>
+    <nome>Sony Bravia LED 43</nome>
+    <descrizione>TV compatta ed elegante, adatta a qualsiasi ambiente domestico, con immagini nitide e colori realistici.</descrizione>
+    <prezzo>429.00</prezzo>
+    <tipologia>tv</tipologia>
+    <immagine>../img/tv_sony_43_bravia.png</immagine>
+    <sconti_bonus>
+      <sconto_generico attivo="0">0</sconto_generico>
+      <sconto_personalizzato attivo="0">
+        <percentuale>0</percentuale>
+        <criterio tipo="nessuno">
+          <soglia>0</soglia>
+          <data_riferimento/>
+        </criterio>
+      </sconto_personalizzato>
+      <bonus_generico attivo="0">0</bonus_generico>
+      <bonus_personalizzato attivo="0">
+        <crediti>0</crediti>
+        <criterio tipo="nessuno">
+          <soglia>0</soglia>
+          <data_riferimento/>
+        </criterio>
+      </bonus_personalizzato>
+    </sconti_bonus>
+    <domande/>
+    <recensioni/>
+  </prodotto>
+  <prodotto>
+    <id_prodotto>4</id_prodotto>
+    <nome>Sony Soundbar HT-S100F</nome>
+    <descrizione>Soundbar compatta progettata per migliorare l’audio del televisore e garantire un suono più chiaro e coinvolgente.</descrizione>
+    <prezzo>129.25</prezzo>
+    <tipologia>soundbar</tipologia>
+    <immagine>../img/soundbar_sony_hts100f.png</immagine>
+    <sconti_bonus>
+      <sconto_generico attivo="1">5</sconto_generico>
+      <sconto_personalizzato attivo="1">
+        <percentuale>6</percentuale>
+        <criterio tipo="reputazione">
+          <soglia>6</soglia>
+          <data_riferimento/>
+        </criterio>
+      </sconto_personalizzato>
+      <bonus_generico attivo="0">0</bonus_generico>
+      <bonus_personalizzato attivo="1">
+        <crediti>16</crediti>
+        <criterio tipo="anni_registrato">
+          <soglia>2</soglia>
+          <data_riferimento/>
+        </criterio>
+      </bonus_personalizzato>
+    </sconti_bonus>
+    <domande>
+      <domanda id_prodotto="4" id_utente="4" segnalato="0">
+        <autore>giulianeri@gmail.com</autore>
+        <testo>Serve un subwoofer o basta da sola?</testo>
+        <id_domanda>69b9a514cf1d2</id_domanda>
+        <data>2026-03-17</data>
+        <ora>20:01:40</ora>
+        <utilita>
+          <valore id_utente="2" reputazione_Vot="11">3</valore>
+        </utilita>
+        <supporto>
+          <valore id_utente="2" reputazione_Vot="11">2</valore>
+        </supporto>
+        <risposte>
+          <risposta id_prodotto="4" id_utente="2" segnalato="0">
+            <id_risposta>69b9a55137aaa</id_risposta>
+            <id_domanda>69b9a514cf1d2</id_domanda>
+            <autore>mariorossi@gmail.com</autore>
+            <data>2026-03-17</data>
+            <ora>20:02:41</ora>
+            <testo>La soundbar funziona perfettamente anche senza subwoofer esterno.</testo>
+            <utilita/>
+            <supporto/>
+          </risposta>
+        </risposte>
+      </domanda>
+    </domande>
+    <recensioni>
+      <recensione id_prodotto="4" id_utente="4" segnalato="0">
+        <autore>giulianeri@gmail.com</autore>
+        <testo>Audio potente e pulito, migliora tantissimo rispetto alla TV.</testo>
+        <data>2026-03-18</data>
+        <ora>13:06:57</ora>
+        <id_recensione>69ba9561b6e5b</id_recensione>
+        <utilita/>
+        <supporto/>
+      </recensione>
+    </recensioni>
+  </prodotto>
+  <prodotto>
+    <id_prodotto>5</id_prodotto>
+    <nome>Samsung Soundbar Serie B</nome>
+    <descrizione>Soluzione audio elegante e facile da installare, ideale per accompagnare TV di diverse dimensioni.</descrizione>
+    <prezzo>179.00</prezzo>
+    <tipologia>soundbar</tipologia>
+    <immagine>../img/soundbar_samsung_seriesB_sub.png</immagine>
+    <sconti_bonus>
+      <sconto_generico attivo="0">0</sconto_generico>
+      <sconto_personalizzato attivo="0">
+        <percentuale>0</percentuale>
+        <criterio tipo="nessuno">
+          <soglia>0</soglia>
+          <data_riferimento/>
+        </criterio>
+      </sconto_personalizzato>
+      <bonus_generico attivo="0">0</bonus_generico>
+      <bonus_personalizzato attivo="0">
+        <crediti>0</crediti>
+        <criterio tipo="nessuno">
+          <soglia>0</soglia>
+          <data_riferimento/>
+        </criterio>
+      </bonus_personalizzato>
+    </sconti_bonus>
+    <domande/>
+    <recensioni/>
+  </prodotto>
+  <prodotto>
+    <id_prodotto>6</id_prodotto>
+    <nome>LG Soundbar SN4</nome>
+    <descrizione>Soundbar dal design minimal, pensata per offrire un’esperienza sonora equilibrata durante film, serie TV e musica..</descrizione>
+    <prezzo>159.00</prezzo>
+    <tipologia>soundbar</tipologia>
+    <immagine>../img/soundbar_lg_sn4.png</immagine>
+    <sconti_bonus>
+      <sconto_generico attivo="0">0</sconto_generico>
+      <sconto_personalizzato attivo="0">
+        <percentuale>0</percentuale>
+        <criterio tipo="nessuno">
+          <soglia>0</soglia>
+          <data_riferimento/>
+        </criterio>
+      </sconto_personalizzato>
+      <bonus_generico attivo="0">0</bonus_generico>
+      <bonus_personalizzato attivo="0">
+        <crediti>0</crediti>
+        <criterio tipo="nessuno">
+          <soglia>0</soglia>
+          <data_riferimento/>
+        </criterio>
+      </bonus_personalizzato>
+    </sconti_bonus>
+    <domande/>
+    <recensioni/>
+  </prodotto>
+  <prodotto>
+    <id_prodotto>7</id_prodotto>
+    <nome>Meliconi Supporto TV da parete Slim</nome>
+    <descrizione>Supporto fisso dal profilo sottile, ideale per montare il televisore a parete in modo discreto e ordinato.</descrizione>
+    <prezzo>39.99</prezzo>
+    <tipologia>supporti</tipologia>
+    <immagine>../img/mount_meliconi_slim.png</immagine>
+    <sconti_bonus>
+      <sconto_generico attivo="0">0</sconto_generico>
+      <sconto_personalizzato attivo="0">
+        <percentuale>0</percentuale>
+        <criterio tipo="nessuno">
+          <soglia>0</soglia>
+          <data_riferimento/>
+        </criterio>
+      </sconto_personalizzato>
+      <bonus_generico attivo="0">0</bonus_generico>
+      <bonus_personalizzato attivo="0">
+        <crediti>0</crediti>
+        <criterio tipo="nessuno">
+          <soglia>0</soglia>
+          <data_riferimento/>
+        </criterio>
+      </bonus_personalizzato>
+    </sconti_bonus>
+    <domande>
+      <domanda id_prodotto="7" id_utente="5" segnalato="0">
+        <autore>luca@gmail.com</autore>
+        <testo>È difficile da montare?</testo>
+        <id_domanda>69b9e054d244b</id_domanda>
+        <data>2026-03-18</data>
+        <ora>00:14:28</ora>
+        <utilita/>
+        <supporto/>
+        <risposte>
+          <risposta id_prodotto="7" id_utente="3" segnalato="0">
+            <id_risposta>69b9e0a78904d</id_risposta>
+            <id_domanda>69b9e054d244b</id_domanda>
+            <autore>paoloverdi@gmail.com</autore>
+            <data>2026-03-18</data>
+            <ora>00:15:51</ora>
+            <testo>Il montaggio è semplice grazie al kit incluso.</testo>
+            <utilita>
+              <valore id_utente="5" reputazione_Vot="4">2</valore>
+            </utilita>
+            <supporto>
+              <valore id_utente="5" reputazione_Vot="4">2</valore>
+            </supporto>
+          </risposta>
+          <risposta id_prodotto="7" id_utente="2" segnalato="0">
+            <id_risposta>69ba9698c6fdb</id_risposta>
+            <id_domanda>69b9e054d244b</id_domanda>
+            <autore>mariorossi@gmail.com</autore>
+            <data>2026-03-18</data>
+            <ora>13:12:08</ora>
+            <testo>Il montaggio è semplicissimo, inoltre il supporto è compatibile con diverse dimensioni di TV.</testo>
+            <utilita>
+              <valore id_utente="5" reputazione_Vot="4">2</valore>
+            </utilita>
+            <supporto>
+              <valore id_utente="5" reputazione_Vot="4">1</valore>
+            </supporto>
+          </risposta>
+        </risposte>
+      </domanda>
+    </domande>
+    <recensioni>
+      <recensione id_prodotto="7" id_utente="5" segnalato="0">
+        <autore>luca@gmail.com</autore>
+        <testo>Fa bene il suo lavoro, materiali solidi.</testo>
+        <data>2026-03-18</data>
+        <ora>13:13:52</ora>
+        <id_recensione>69ba97009b866</id_recensione>
+        <utilita>
+          <valore id_utente="2" reputazione_Vot="11">2</valore>
+        </utilita>
+        <supporto>
+          <valore id_utente="2" reputazione_Vot="11">1</valore>
+        </supporto>
+      </recensione>
+    </recensioni>
+  </prodotto>
+  <prodotto>
+    <id_prodotto>8</id_prodotto>
+    <nome>Vogel Supporto TV Orientabile</nome>
+    <descrizione>Supporto regolabile che consente di orientare il televisore per una visione ottimale da diverse angolazioni.</descrizione>
+    <prezzo>79.00</prezzo>
+    <tipologia>supporti</tipologia>
+    <immagine>../img/mount_vogels_fullmotion.png</immagine>
+    <sconti_bonus>
+      <sconto_generico attivo="0">0</sconto_generico>
+      <sconto_personalizzato attivo="0">
+        <percentuale>0</percentuale>
+        <criterio tipo="nessuno">
+          <soglia>0</soglia>
+          <data_riferimento/>
+        </criterio>
+      </sconto_personalizzato>
+      <bonus_generico attivo="0">0</bonus_generico>
+      <bonus_personalizzato attivo="0">
+        <crediti>0</crediti>
+        <criterio tipo="nessuno">
+          <soglia>0</soglia>
+          <data_riferimento/>
+        </criterio>
+      </bonus_personalizzato>
+    </sconti_bonus>
+    <domande/>
+    <recensioni/>
+  </prodotto>
+  <prodotto>
+    <id_prodotto>9</id_prodotto>
+    <nome>One For All Supporto TV Fisso</nome>
+    <descrizione>Supporto robusto e semplice da installare, progettato per garantire stabilità e sicurezza al televisore.</descrizione>
+    <prezzo>49.90</prezzo>
+    <tipologia>supporti</tipologia>
+    <immagine>../img/mount_oneforall_fixed.png</immagine>
+    <sconti_bonus>
+      <sconto_generico attivo="0">0</sconto_generico>
+      <sconto_personalizzato attivo="0">
+        <percentuale>0</percentuale>
+        <criterio tipo="nessuno">
+          <soglia>0</soglia>
+          <data_riferimento/>
+        </criterio>
+      </sconto_personalizzato>
+      <bonus_generico attivo="0">0</bonus_generico>
+      <bonus_personalizzato attivo="0">
+        <crediti>0</crediti>
+        <criterio tipo="nessuno">
+          <soglia>0</soglia>
+          <data_riferimento/>
+        </criterio>
+      </bonus_personalizzato>
+    </sconti_bonus>
+    <domande/>
+    <recensioni/>
+  </prodotto>
+</catalogo_prodotti>

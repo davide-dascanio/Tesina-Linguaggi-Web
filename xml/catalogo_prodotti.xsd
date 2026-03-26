@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <!-- Elemento root -->
+  <xs:element name="catalogo_prodotti">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="prodotto" minOccurs="1" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <!-- Dati base prodotto -->
+              <xs:element name="id_prodotto" type="xs:integer"/>
+              <xs:element name="nome" type="xs:string"/>
+              <xs:element name="descrizione" type="xs:string"/>
+              <xs:element name="prezzo" type="xs:decimal"/>
+              <xs:element name="tipologia" type="xs:string"/>
+              <xs:element name="immagine" type="xs:string"/>
+              
+              <!-- SCONTI E BONUS -->
+              <xs:element name="sconti_bonus">
+                <xs:complexType>
+                  <xs:sequence>
+                    
+                    <!-- Sconto generico -->
+                    <xs:element name="sconto_generico">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:decimal">
+                            <xs:attribute name="attivo" type="xs:integer" use="required"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    
+                    <!-- Sconto personalizzato -->
+                    <xs:element name="sconto_personalizzato">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="percentuale" type="xs:decimal"/>
+                          <xs:element name="criterio">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="soglia" type="xs:decimal"/>
+                                <xs:element name="data_riferimento" type="xs:date"/>
+                              </xs:sequence>
+                              <xs:attribute name="tipo" type="xs:string" use="required"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="attivo" type="xs:integer" use="required"/>
+                      </xs:complexType>
+                    </xs:element>
+                    
+                    <!-- Bonus generico -->
+                    <xs:element name="bonus_generico">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:decimal">
+                            <xs:attribute name="attivo" type="xs:integer" use="required"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    
+                    <!-- Bonus personalizzato -->
+                    <xs:element name="bonus_personalizzato">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="crediti" type="xs:decimal"/>
+                          <xs:element name="criterio">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="soglia" type="xs:decimal"/>
+                                <xs:element name="data_riferimento" type="xs:date"/>
+                              </xs:sequence>
+                              <xs:attribute name="tipo" type="xs:string" use="required"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="attivo" type="xs:integer" use="required"/>
+                      </xs:complexType>
+                    </xs:element>
+                    
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              
+              <!-- DOMANDE -->
+              <xs:element name="domande">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="domanda" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="autore" type="xs:string"/>
+                          <xs:element name="testo" type="xs:string"/>
+                          <xs:element name="id_domanda" type="xs:string"/>
+                          <xs:element name="data" type="xs:date"/>
+                          <xs:element name="ora" type="xs:time"/>
+                          
+                          <!-- Utilita' domanda -->
+                          <xs:element name="utilita">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="valore" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:integer">
+                                        <xs:attribute name="id_utente" type="xs:integer" use="required"/>
+                                        <xs:attribute name="reputazione_Vot" type="xs:integer" use="required"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          
+                          <!-- Supporto domanda -->
+                          <xs:element name="supporto">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="valore" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:integer">
+                                        <xs:attribute name="id_utente" type="xs:integer" use="required"/>
+                                        <xs:attribute name="reputazione_Vot" type="xs:integer" use="required"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          
+                          <!-- Risposte -->
+                          <xs:element name="risposte">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="risposta" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="id_risposta" type="xs:string"/>
+                                      <xs:element name="id_domanda" type="xs:string"/>
+                                      <xs:element name="autore" type="xs:string"/>
+                                      <xs:element name="data" type="xs:date"/>
+                                      <xs:element name="ora" type="xs:time"/>
+                                      <xs:element name="testo" type="xs:string"/>
+                                      
+                                      <!-- Utilita' risposta -->
+                                      <xs:element name="utilita">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="valore" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:simpleContent>
+                                                  <xs:extension base="xs:integer">
+                                                    <xs:attribute name="id_utente" type="xs:integer" use="required"/>
+                                                    <xs:attribute name="reputazione_Vot" type="xs:integer" use="required"/>
+                                                  </xs:extension>
+                                                </xs:simpleContent>
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      
+                                      <!-- Supporto risposta -->
+                                      <xs:element name="supporto">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="valore" minOccurs="0" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:simpleContent>
+                                                  <xs:extension base="xs:integer">
+                                                    <xs:attribute name="id_utente" type="xs:integer" use="required"/>
+                                                    <xs:attribute name="reputazione_Vot" type="xs:integer" use="required"/>
+                                                  </xs:extension>
+                                                </xs:simpleContent>
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      
+                                    </xs:sequence>
+                                    <xs:attribute name="id_prodotto" type="xs:integer" use="required"/>
+                                    <xs:attribute name="id_utente" type="xs:integer" use="required"/>
+                                    <xs:attribute name="segnalato" type="xs:integer" use="required"/>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          
+                        </xs:sequence>
+                        <xs:attribute name="id_prodotto" type="xs:integer" use="required"/>
+                        <xs:attribute name="id_utente" type="xs:integer" use="required"/>
+                        <xs:attribute name="segnalato" type="xs:integer" use="required"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              
+              <!-- RECENSIONI -->
+              <xs:element name="recensioni">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="recensione" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="autore" type="xs:string"/>
+                          <xs:element name="testo" type="xs:string"/>
+                          <xs:element name="data" type="xs:date"/>
+                          <xs:element name="ora" type="xs:time"/>
+                          <xs:element name="id_recensione" type="xs:string"/>
+                          
+                          <!-- Utilita' recensione -->
+                          <xs:element name="utilita">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="valore" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:integer">
+                                        <xs:attribute name="id_utente" type="xs:integer" use="required"/>
+                                        <xs:attribute name="reputazione_Vot" type="xs:integer" use="required"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          
+                          <!-- Supporto recensione -->
+                          <xs:element name="supporto">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="valore" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:integer">
+                                        <xs:attribute name="id_utente" type="xs:integer" use="required"/>
+                                        <xs:attribute name="reputazione_Vot" type="xs:integer" use="required"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          
+                        </xs:sequence>
+                        <xs:attribute name="id_prodotto" type="xs:integer" use="required"/>
+                        <xs:attribute name="id_utente" type="xs:integer" use="required"/>
+                        <xs:attribute name="segnalato" type="xs:integer" use="required"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+</xs:schema>

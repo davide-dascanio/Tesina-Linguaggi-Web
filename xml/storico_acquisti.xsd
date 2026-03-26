@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    
+  <xs:element name="acquisti">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="acquisto" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="data" type="xs:date"/>
+              <xs:element name="ora" type="xs:time"/>
+              <xs:element name="id_prodotto" type="xs:integer"/>
+              <xs:element name="nome_prodotto" type="xs:string"/>
+              <xs:element name="prezzo_unitario" type="xs:decimal"/>
+              <xs:element name="quantita" type="xs:integer"/>
+              <xs:element name="prezzo_scontato" type="xs:decimal"/>
+              <xs:element name="bonus" type="xs:deciaml"/>
+              <xs:element name="prezzo_totale" type="xs:decimal"/>
+            </xs:sequence>
+            <xs:attribute name="id_utente" type="xs:integer" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+    
+</xs:schema>

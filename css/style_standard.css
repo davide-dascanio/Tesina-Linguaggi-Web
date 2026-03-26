@@ -1,0 +1,350 @@
+* { 
+    font-family: 'Segoe UI', sans-serif;  
+}
+
+body {
+    background: linear-gradient(135deg, #dde1f5 0%, #eef0fb 60%, #f5f5ff 100%);
+    background-attachment: fixed;
+}
+
+.cont { 
+    margin-top: 8vh; 
+    margin-bottom: 8vh; 
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center; 
+    align-content: start; 
+    padding: 0 18px; 
+}
+
+table {
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(80, 80, 120, 0.18);
+    box-shadow: 0 4px 24px rgba(44, 44, 62, 0.09);
+    width: 100%; 
+    border-collapse: collapse;
+    margin-top: 60px;
+    border-radius: 16px; 
+    overflow: hidden;
+}
+
+td { 
+    border: 1px solid rgba(80, 80, 120, 0.12);
+    padding: 10px; 
+    text-align: center;
+    color: #2c2c3e;
+    max-width: 240px;
+    font-size: 15px;
+    overflow: auto;
+}
+
+th {
+    border: 1px solid rgba(80, 80, 120, 0.12); 
+    padding: 10px;
+    text-align: center; 
+    background: rgba(74, 74, 138, 0.10);
+    color: #1a1a2e; 
+    font-weight: 700;
+    border-bottom: 1px solid rgba(74, 74, 138, 0.2);
+    letter-spacing: 0.3px;
+}
+
+tr:hover { 
+    background: rgba(74, 74, 138, 0.05); 
+}
+
+.input {
+    padding: 5px; 
+    margin-bottom: 15px;
+    border: 1px solid rgba(74, 74, 138, 0.25); 
+    border-radius: 8px;
+    color: #2c2c3e; 
+    background: rgba(255, 255, 255, 0.88);
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.input::placeholder { 
+    color: #9a9ab8; 
+}
+
+.input:focus { 
+    border-color: #4a4a8a; 
+    box-shadow: 0 0 0 3px rgba(74,74,138,0.10); 
+}
+
+.btn {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    text-decoration: none; 
+    color: #ffffff;
+    font-size: 16px; 
+    font-weight: 700; 
+    border-radius: 10px; 
+    cursor: pointer;
+    background: linear-gradient(135deg, #4a4a8a 0%, #2c2c3e 100%);
+    padding: 10px 24px; 
+    border: none; 
+    margin: 10px auto;
+    transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover { 
+    opacity: 0.85; 
+    transform: translateY(-2px); 
+}
+
+.titolo { 
+    margin-bottom: 2vh; 
+    color: #1a1a2e; 
+    text-align: center; 
+    font-size: 26px; 
+    font-weight: 700; 
+}
+
+#done  { 
+    cursor: pointer; 
+    color: #00897b; 
+    vertical-align: middle; 
+    background: none; 
+    border: none; 
+    font-size: 22px; 
+    transition: color 0.25s ease; 
+}
+
+#done:hover  { 
+    color: #005f56; 
+}
+
+.up { 
+    margin-bottom: 7vh; 
+}
+
+
+
+
+#edit  { 
+    cursor: pointer; 
+    color: #4a4a8a; 
+    vertical-align: middle; 
+    font-size: 24px; 
+    background: none; 
+    border: none; 
+    transition: color 0.25s ease; 
+}
+
+#edit:hover  { 
+    color: #1a1a2e; 
+}
+
+
+
+
+.form {
+    padding: 20px;
+}
+
+.form label { 
+    font-weight: 600; 
+    color: #2c2c3e; 
+}
+
+#input { 
+    width: 80%; 
+    text-align: center; 
+}
+
+
+
+#successo { 
+    color: #00897b;
+    text-align: center; 
+    font-weight: 600; 
+}
+
+h2 { 
+    color: #d63031; 
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 4vh; 
+    font-size: 15px; 
+}
+
+
+
+.tooltip { 
+    position: relative; 
+    display: inline-block; 
+    cursor: pointer; 
+    bottom: 2.6px;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(12px);
+    color: #2c2c3e; 
+    text-align: center; 
+    border-radius: 8px;
+    padding: 8px 12px; 
+    position: absolute; 
+    z-index: 99;
+    top: 110%; 
+    left: 50%; 
+    margin-left: -50px;
+    opacity: 0; 
+    transition: opacity 0.3s; 
+    font-size: 13px; 
+    width: 300px;
+    border: 1px solid rgba(74, 74, 138, 0.2);
+    box-shadow: 0 4px 16px rgba(44,44,62,0.10);
+}
+
+/* Seleziona l'elemento con classe .tooltiptext che si trova dentro un elemento con classe .tooltip, 
+   ma solo quando quell'elemento .tooltip è in stato :hover */
+.tooltip:hover .tooltiptext { 
+    visibility: visible; 
+    opacity: 1; 
+}
+
+li { 
+    text-align: left; 
+    color: #2c2c3e; 
+}
+
+ol { 
+    list-style-type: decimal;
+}
+
+#simbolo { 
+    color: #4a4a8a; 
+    margin: 0 6px; 
+    vertical-align: middle; 
+}
+
+
+
+.done  { 
+    cursor: pointer; 
+    color: #4a4a8a; 
+    vertical-align: middle; 
+    background: none; 
+    border: none; 
+    font-size: 19px; 
+    transition: color 0.25s ease; 
+}
+
+.done:hover { 
+    color: #1a1a2e; 
+}
+
+
+
+#simbolo_cestino { 
+    color: #2c2c3e; 
+    margin: 0 6px; 
+    font-size: 24px; 
+    vertical-align: middle; 
+    cursor: pointer; 
+    transition: color 0.25s ease; 
+}
+
+#simbolo_cestino:hover { 
+    color: red; 
+}
+
+#simbolo_segnala { 
+    color: #2c2c3e; 
+    margin: 0 6px; 
+    font-size: 24px; 
+    vertical-align: middle; 
+    cursor: pointer; 
+    transition: color 0.25s ease; 
+}
+
+#simbolo_segnala:hover { 
+    color: rgba(217, 217, 17, 0.474); 
+}
+
+
+
+.go-back {
+    gap: 5px;
+    text-decoration: none;
+    color: #4a4a8a;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    background: none;
+    border: none;
+    transition: color 0.25s ease, transform 0.2s ease;
+}
+
+.go-back:hover {
+    color: #1a1a2e;
+    transform: translateX(-3px);
+}
+
+
+
+.contenitore {
+    margin-top: 8vh; 
+    margin-bottom: 8vh; 
+    display: grid;
+    justify-content: center; 
+    align-content: start; 
+    padding: 0 20px; 
+}
+
+
+.col-mod-profilo {
+    border: 1px solid rgba(80, 80, 120, 0.12);
+    padding: 10px; 
+    text-align: center;
+    max-width: none;
+    color: #2c2c3e;
+    overflow: auto;
+}
+
+
+
+select {
+    background: rgba(255,255,255,0.65); 
+    backdrop-filter: blur(8px);
+    color: #2c2c3e; 
+    border: 1px solid rgba(74, 74, 138, 0.25);
+    border-radius: 8px; 
+    padding: 5px;
+    outline: none;
+    cursor: pointer; 
+    transition: border-color 0.25s ease;
+}
+
+select:focus { 
+    border-color: #4a4a8a; 
+}
+
+select option { 
+    background: #f5f5ff; 
+    color: #2c2c3e; 
+}
+
+
+
+#icon {
+    vertical-align: middle;
+    color: #FF9800;
+    background: none; 
+    border: none; 
+    font-size: 22px; 
+}
+
+.big { 
+    font-size: 20px; 
+    color: #2c2c3e; 
+}
+
+
+

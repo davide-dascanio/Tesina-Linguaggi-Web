@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faq xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="faq.xsd">
+  <entry id="699f76fc2a1f9">
+    <question>Quanti giorni servono per la spedizione?</question>
+    <answer>5-6 giorni lavorativi</answer>
+  </entry>
+  <entry id="65edcd1a96265">
+    <question>Quali sono i vostri metodi di pagamento accettati?</question>
+    <answer>Visa, Mastercard e Paypal</answer>
+  </entry>
+  <entry id="65edcd497168c">
+    <question>Avete un servizio clienti?</question>
+    <answer>Puoi contattarci dal lunedi al venerdi alla seguente mail: rugbyworld@gmail.com</answer>
+  </entry>
+  <entry id="65edcd7c0e2b9">
+    <question>Offrite sconti o promozioni?</question>
+    <answer>Gli sconti vengono aggiornati continuamente per ogni prodotto in base a determinate condizioni</answer>
+  </entry>
+  <entry id="65edcdc17f0c6">
+    <question>Come posso iscrivermi alla vostra newsletter o ricevere aggiornamenti?</question>
+    <answer>Creando un proprio account, ti verranno automaticamente inviati aggiornamenti e notizie riguardo il nostro sito</answer>
+  </entry>
+</faq>

@@ -1,0 +1,245 @@
+* { 
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #dde1f5 0%, #eef0fb 60%, #f5f5ff 100%);
+    background-attachment: fixed;
+}
+
+.cont { 
+    margin-top: 8vh; 
+    padding: 0 20px 20px;
+}
+
+.container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    padding: 20px; 
+    gap: 60px; 
+    margin-bottom: 6vh; 
+}
+
+.btn {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    background: linear-gradient(135deg, #4a4a8a 0%, #2c2c3e 100%);
+    width: 13vw; 
+    height: 40px; 
+    text-decoration: none; 
+    font-size: 16px; 
+    font-weight: 700;
+    color: #ffffff; 
+    border-radius: 50px; 
+    border: none; 
+    cursor: pointer;
+    box-shadow: 0 2px 12px rgba(44, 44, 62, 0.15);
+    transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover { 
+    opacity: 0.85; 
+    transform: translateY(-2px); 
+}
+
+.prodotto {
+    width: 90%; 
+    margin: 3vh auto;
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(80, 80, 120, 0.18);
+    box-shadow: 0 4px 24px rgba(44, 44, 62, 0.09);
+    border-radius: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.prodotto:hover { 
+    transform: translateY(-3px); 
+    box-shadow: 0 8px 36px rgba(44, 44, 62, 0.15); 
+}
+
+.nome {
+    margin: 4vh auto 2vh; 
+    width: fit-content;
+    color: #1a1a2e; 
+    font-size: 22px; 
+    font-weight: 700;
+    border-bottom: 1px solid rgba(74, 74, 138, 0.3);
+    padding-bottom: 6px;
+}
+
+.table { 
+    width: 95%; 
+    border-collapse: collapse; 
+    table-layout: fixed; 
+    margin-bottom: 4vh; 
+}
+
+.btn1 {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    background: rgba(255, 255, 255, 0.65);
+    width: 13vw; 
+    height: 5vh;
+    min-height: 40px;
+    text-decoration: none; 
+    font-size: 16px; 
+    font-weight: 700;
+    color: #2c2c3e; 
+    border-radius: 50px;
+    border: 1px solid rgba(74, 74, 138, 0.25);
+    margin-bottom: 20px; 
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.btn1:hover { 
+    background: linear-gradient(135deg, #4a4a8a 0%, #2c2c3e 100%); 
+    color: #ffffff; 
+    transform: translateY(-2px); 
+}
+
+.td { 
+    padding: 10px; 
+    text-align: center; 
+    box-sizing: border-box; 
+    vertical-align: middle; 
+    color: #2c2c3e; 
+}
+
+.box { 
+    max-width: 280px; 
+    max-height: 280px; 
+    margin: auto; 
+    overflow: hidden; 
+    border-radius: 12px; 
+}
+
+.img { 
+    max-width: 280px; 
+    max-height: 280px; 
+    object-fit: cover; 
+    border-radius: 12px; 
+}
+
+.des { 
+    max-width: 500px;
+    font-size: 17px;
+    color: #2c2c3e; 
+    line-height: 1.6; 
+}
+
+#successo { 
+    color: #00897b; 
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.tooltip { 
+    position: relative; 
+    display: inline-block; 
+    cursor: pointer; 
+    left: 30px;
+    bottom: 1px;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    background: rgba(255,255,255,0.92);
+    color: #2c2c3e; 
+    text-align: center; 
+    border-radius: 8px;
+    padding: 8px 12px; 
+    position: absolute; 
+    z-index: 99;
+    top: 150%; 
+    left: 50%; 
+    margin-left: -50px;
+    opacity: 0; 
+    transition: opacity 0.3s; 
+    font-size: 13px; 
+    width: 350px;
+    border: 1px solid rgba(74, 74, 138, 0.2);
+    box-shadow: 0 4px 16px rgba(44,44,62,0.10);
+}
+
+/* Seleziona l'elemento con classe .tooltiptext che si trova dentro un elemento con classe .tooltip, 
+   ma solo quando quell'elemento .tooltip è in stato :hover */
+.tooltip:hover .tooltiptext { 
+    visibility: visible; 
+    opacity: 1; 
+}
+
+li { 
+    text-align: left;
+    color: #2c2c3e; 
+}
+
+#simbolo { 
+    color: #4a4a8a; 
+    vertical-align: middle; 
+    font-size: 22px; 
+}
+
+.prezzo { 
+    margin-top: 3vh;
+    margin-right: 5px;
+    margin-left: 20px;
+    font-size: 24px; 
+    font-weight: 700; 
+    color: #1a1a2e; 
+}
+
+.linea { 
+    width: fit-content; 
+    margin-left: 9vw; 
+}
+
+.linea form { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+}
+
+.input {
+    padding: 8px 12px; 
+    margin-bottom: 15px;
+    border: 1px solid rgba(74, 74, 138, 0.25); 
+    border-radius: 8px;
+    color: #2c2c3e; 
+    background: rgba(255, 255, 255, 0.88);
+    font-size: 15px; 
+    outline: none;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.input::placeholder { 
+    color: #9a9ab8; 
+}
+
+.input:focus { 
+    border-color: #4a4a8a; 
+    box-shadow: 0 0 0 3px rgba(74,74,138,0.10); 
+}
+
+#cart { 
+    color: #2c2c3e; 
+    font-size: 44px; 
+    cursor: pointer; 
+    transition: color 0.25s ease, transform 0.2s ease; 
+}
+
+#cart:hover { 
+    color: #4a4a8a; 
+    transform: scale(1.1); 
+}
+
+.titolo { 
+    margin-bottom: 3vh; 
+    color: #1a1a2e; 
+    text-align: center; 
+    font-size: 26px; 
+    font-weight: 700; 
+}

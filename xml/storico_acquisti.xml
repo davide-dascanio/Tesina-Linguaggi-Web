@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<acquisti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="storico_acquisti.xsd">
+  <acquisto id_utente="3">
+    <data>2026-03-26</data>
+    <ora>16:03:46</ora>
+    <id_prodotto>1</id_prodotto>
+    <nome_prodotto>Samsung Crystal UHD 50</nome_prodotto>
+    <prezzo_unitario>500.00</prezzo_unitario>
+    <quantita>1</quantita>
+    <prezzo_scontato>400.00</prezzo_scontato>
+    <bonus>15</bonus>
+    <prezzo_totale>400.00</prezzo_totale>
+  </acquisto>
+</acquisti>

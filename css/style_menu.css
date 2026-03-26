@@ -1,0 +1,60 @@
+* { 
+    font-family: 'Segoe UI', sans-serif; 
+}
+
+body {
+    background: linear-gradient(135deg, #dde1f5 0%, #eef0fb 60%, #f5f5ff 100%);
+    background-attachment: fixed;
+}
+
+/* Contenitore principale */
+.cont { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 100px;
+    gap: 40px; 
+    padding: 15vh 20px; 
+    flex-wrap: wrap;
+    position: relative;   
+}
+
+
+.voce {
+    background: rgba(255, 255, 255, 0.88);
+    width: 25vw; 
+    height: 7vh; 
+    min-height: 54px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    text-decoration: none; 
+    font-size: 18px; 
+    font-weight: 700;
+    color: #2c2c3e; 
+    border-radius: 50px;
+    border: 1px solid rgba(74, 74, 138, 0.25);
+    box-shadow: 0 2px 16px rgba(44, 44, 62, 0.10);
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.voce:hover {
+    background: linear-gradient(135deg, #4a4a8a 0%, #2c2c3e 100%);
+    color: #ffffff; 
+    transform: translateY(-3px);
+    box-shadow: 0 8px 28px rgba(44, 44, 62, 0.20);
+}
+
+/* Separatore verticale tra i bottoni */
+.sep {
+    border-left: 1px solid rgba(74, 74, 138, 0.18);
+    height: 80px;
+    align-self: center;
+}
+
+table { 
+    width: 100%; 
+    margin: 60px auto; 
+    border-collapse: collapse; 
+}
+

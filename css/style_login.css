@@ -1,0 +1,146 @@
+* { 
+    font-family: 'Segoe UI', sans-serif; 
+}
+
+body {
+    background: linear-gradient(135deg, #dde1f5 0%, #eef0fb 60%, #f5f5ff 100%);
+    background-attachment: fixed;
+}
+
+.wrapper {
+    border-radius: 20px;
+    position: fixed;
+    width: 60%;
+    height: 65vh;
+    left: 20%;
+    top: 22%;
+    display: grid;
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(80, 80, 120, 0.18);
+    box-shadow: 0 8px 40px rgba(44, 44, 62, 0.12);
+}
+
+.form { 
+    margin-left: 3vw;
+    margin-top: 6vh;
+    width: fit-content; 
+}
+
+.titolo {
+    color: #1a1a2e; 
+    font-size: 30px; 
+    text-align: center; 
+    margin-bottom: 24px;
+}
+
+.inp {
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(74, 74, 138, 0.3);
+}
+
+.inp:focus { 
+    border-bottom-color: #4a4a8a; 
+}
+
+.input {
+    border: none; 
+    outline: none; 
+    background: none;
+    width: 260px; 
+    padding-right: 10px;
+    font-size: 15px; 
+    color: #2c2c3e; 
+}
+
+.input::placeholder { 
+    color: #9a9ab8; 
+}
+
+.submit {
+    color: #ffffff; 
+    border: none; 
+    outline: none;
+    width: 100%; 
+    padding: 12px; 
+    font-size: 17px; 
+    font-weight: 700;
+    border-radius: 40px; 
+    letter-spacing: 0.5px; 
+    cursor: pointer;
+    background: linear-gradient(135deg, #4a4a8a 0%, #2c2c3e 100%);
+    margin-top: 24px;
+    transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.submit:hover { 
+    opacity: 0.85; 
+    transform: translateY(-2px); 
+}
+
+.footer { 
+    color: #5a5a7a; 
+    font-size: 14px; 
+    text-align: center; 
+    margin-top: 16px; 
+}
+
+.link { 
+    color: #4a4a8a; 
+    text-decoration: underline; 
+    font-weight: 600; 
+}
+
+.link:hover { 
+    color: #1a1a2e; 
+}
+
+.banner {
+    position: absolute; 
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    top: 0; 
+    right: 0;
+    width: 55%;
+    height: 100%;
+    background: linear-gradient(135deg, #4a4a8a 0%, #2c2c3e 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 60% 100%);
+    padding-right: 70px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: flex-end;
+}
+
+.banner img {
+    margin-bottom: 70px;
+    padding-bottom: 20px;
+    width: 200px;
+    height: 180px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.4);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+}
+
+.wel_text {
+    color: rgba(255,255,255,0.92); 
+    font-size: 32px;
+    font-weight: 700; 
+    text-align: center;
+}
+
+h2 { 
+    color: #d63031; 
+    text-align: center; 
+    margin-top: 4vh;
+    margin-bottom: 4vh; 
+    font-size: 15px; 
+}
+
+#successo { 
+    color: #00897b; 
+    font-weight: 600; 
+}
+
+td { 
+    padding-top: 30px; 
+}

@@ -1,0 +1,171 @@
+* { 
+    font-family: 'Segoe UI', sans-serif; 
+}
+
+body {
+    background: linear-gradient(135deg, #dde1f5 0%, #eef0fb 60%, #f5f5ff 100%);
+    background-attachment: fixed;
+}
+
+.cont { 
+    margin-top: 8vh; 
+    margin-bottom: 4vh; 
+    display: grid; 
+    justify-content: center; 
+    align-content: center; 
+}
+
+.wrapper {
+    border-radius: 20px; 
+    width: 720px; 
+    display: grid;
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(80, 80, 120, 0.18);
+    box-shadow: 0 8px 40px rgba(44, 44, 62, 0.12);
+    padding: 30px 40px;
+}
+
+.titolo { 
+    font-size: 28px; 
+    color: #1a1a2e; 
+    font-weight: 700; 
+    text-align: center; 
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.tooltip { 
+    position: relative; 
+    display: inline-block; 
+    cursor: pointer; 
+    bottom: 2.6px;
+}
+
+#simbolo { 
+    color: #4a4a8a; 
+    margin: 0 6px; 
+    vertical-align: middle; 
+}
+
+.tooltiptext {
+    visibility: hidden;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(12px);
+    color: #2c2c3e; 
+    text-align: center; 
+    border-radius: 8px;
+    padding: 8px 12px; 
+    position: absolute; 
+    z-index: 99;
+    top: 100%; 
+    left: 50%; 
+    margin-left: -50px;
+    opacity: 0; 
+    transition: opacity 0.3s; 
+    font-size: 13px; 
+    width: 300px;
+    border: 1px solid rgba(74, 74, 138, 0.2);
+    box-shadow: 0 4px 16px rgba(44,44,62,0.10);
+}
+
+/* Seleziona l'elemento con classe .tooltiptext che si trova dentro un elemento con classe .tooltip, 
+   ma solo quando quell'elemento .tooltip è in stato :hover */
+.tooltip:hover .tooltiptext { 
+    visibility: visible; 
+    opacity: 1; 
+}
+
+li { 
+    text-align: left; 
+    color: #2c2c3e; 
+}
+
+ol { 
+    list-style-type: decimal; 
+}
+
+table { 
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td { 
+    padding-top: 30px; 
+}
+
+.inp { 
+    padding-bottom: 10px; 
+    padding-left: 20px; 
+    padding-right: 20px; 
+    margin-bottom: 14px; 
+}
+
+.input {
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 600;
+    color: #2c2c3e;
+    border-bottom: 1px solid rgba(74, 74, 138, 0.3);
+    padding-bottom: 8px;
+}
+
+.input::placeholder { 
+    color: #9a9ab8;
+    font-weight: 400;
+}
+
+.input:focus { 
+    border-bottom-color: #4a4a8a; 
+}
+
+.submit {
+    color: #ffffff; 
+    border: none; 
+    outline: none;
+    width: 50%; 
+    padding: 12px; 
+    font-size: 17px; 
+    font-weight: 700;
+    border-radius: 40px; 
+    letter-spacing: 0.5px; 
+    cursor: pointer;
+    background: linear-gradient(135deg, #4a4a8a 0%, #2c2c3e 100%);
+    margin: 20px auto; 
+    display: block;
+    transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.submit:hover { 
+    opacity: 0.85; 
+    transform: translateY(-2px); 
+}
+
+.footer { 
+    color: #5a5a7a; 
+    font-size: 14px; 
+    text-align: center; 
+}
+
+.link { 
+    color: #4a4a8a; 
+    text-decoration: underline; 
+    font-weight: 600; 
+}
+
+.link:hover { 
+    color: #1a1a2e; 
+}
+
+h2 { 
+    color: #d63031; 
+    text-align: center; 
+    margin-bottom: 4vh; 
+    font-size: 15px; 
+}
+
+
+
+
