@@ -56,8 +56,8 @@
                                     <tr>
                                         <!--Si usa item(0) perché normalmente in ogni entry c'è una sola domanda e una sola risposta, 
                                             quindi si prende direttamente il primo (e unico) elemento-->
-                                        <td><strong><?php echo $question->item(0)->nodeValue; ?></strong></td>
-                                        <td><p><strong><?php echo $answer->item(0)->nodeValue; ?></strong></p></td>
+                                        <td><strong><?php echo nl2br($question->item(0)->nodeValue); ?></strong></td>
+                                        <td><p><strong><?php echo nl2br($answer->item(0)->nodeValue); ?></strong></p></td>
                                     </tr>
                                 <?php
                                 }
@@ -114,7 +114,7 @@
                                             <a href="../res/elimina_faq.php?id=<?php echo $id; ?>"><span id="done" class="material-symbols-outlined">delete</span></a>
                                         </td>
                                         <td>
-                                            <p><strong><?php echo $question->item(0)->nodeValue; ?></strong></p>
+                                            <p><strong><?php echo nl2br($question->item(0)->nodeValue); ?></strong></p>
                                             <form action="../res/processa_domanda.php" method="post">
                                                 <input type='hidden' name='faq_id' value='<?php echo $id; ?>'>
                                                 <textarea style="width:500px; height:100px; resize:none; vertical-align:top;" class="input" name="question" placeholder="Modifica domanda..."required></textarea>
@@ -122,7 +122,7 @@
                                             </form>
                                         </td>
                                         <td>                                   
-                                            <p><strong><?php echo $answer->item(0)->nodeValue; ?></strong></p>
+                                            <p><strong><?php echo nl2br($answer->item(0)->nodeValue); ?></strong></p>
                                             <form action="../res/processa_risposta.php" method="post">
                                                 <input type='hidden' name='faq_id' value='<?php echo $id; ?>'>
                                                 <textarea style="width:500px; height:100px; resize:none; vertical-align:top;" class="input" name="answer" placeholder="Modifica risposta..."required></textarea>
@@ -166,8 +166,8 @@
                                 $answer = $entry->getElementsByTagName('answer');
                             ?>
                                 <tr>
-                                    <td><strong><?php echo $question->item(0)->nodeValue; ?></strong></td>
-                                    <td><p><strong><?php echo $answer->item(0)->nodeValue; ?></strong></p></td>
+                                    <td><strong><?php echo nl2br($question->item(0)->nodeValue); ?></strong></td>
+                                    <td><p><strong><?php echo nl2br($answer->item(0)->nodeValue); ?></strong></p></td>
                                 </tr>
                                 <?php
                             }

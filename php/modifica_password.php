@@ -40,7 +40,11 @@
             if(isset($_SESSION['errore_preg']) && $_SESSION['errore_preg'] == 'true'){
                 echo "<h2>La password non rispetta i criteri di sicurezza!</h2>";
                 unset($_SESSION['errore_preg']);
-            }    
+            } 
+            if(isset($_SESSION['errore_vecchia_pass']) && $_SESSION['errore_vecchia_pass'] == 'true'){
+                echo "<h2>La vecchia password inserita non è corretta!</h2>";
+                unset($_SESSION['errore_vecchia_pass']);
+            }
         ?>
         <div class="cont">
         <?php
@@ -63,7 +67,7 @@
                                     <li>Deve contenere almeno una lettera maiuscola e una minuscola;</li>
                                     <li>Deve contenere almeno un numero;</li>
                                     <li>Deve contenere almeno un carattere speciale (!,@,#,$,%,^,&,*).</li>
-                                </ol>       
+                                </ol>
                             </span>
                             <i id="simbolo" class="material-symbols-outlined">info</i>
                         </div>
@@ -73,6 +77,7 @@
                         <tr>
                             <td>
                                 <form class="form" action="../res/processa_modifica_pass.php" method="post">
+                                    <input style="width:300px;" class="input" type="password" name="vecchia_password" placeholder="INSERISCI LA VECCHIA PASSWORD" required><br><br>
                                     <input style="width:300px;" class="input" type="password" name="password" placeholder="INSERISCI NUOVA PASSWORD!" required><br>
                                     <br><br><br>
                                     <input class="btn" type="submit" value="Salva Password">

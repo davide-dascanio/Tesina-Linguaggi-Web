@@ -1,7 +1,11 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $faq_id = $_POST['faq_id'];
-    $question_text = $_POST['question'];
+
+    // I textarea su Windows mandano le andate a capo come \r\n
+    // Il DOMDocument quando salva nel XML converte il \r in &#13;
+    // Rimuoviamo quindi il \r prima di assegnare il testo al nodo XML
+    $question_text = str_replace("\r\n", "\n", $_POST['question']);
     
     $xmlFile = '../xml/faq.xml';
 

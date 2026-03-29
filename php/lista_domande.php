@@ -151,7 +151,7 @@
                 echo '</td>';
 
                 echo '<td>Il cliente <strong>' . $autoreDomanda . '</strong> ha pubblicato la domanda il ' . $dataDomanda . ' alle ' . $oraDomanda . '</td>';
-                echo '<td>' . $testoDomanda . '</td>';
+                echo nl2br('<td>' . $testoDomanda . '</td>');
 
                 // Voti / risposta: non disponibili per la propria domanda
                 if ($id_utente == $id_utente_domanda) {
@@ -261,7 +261,7 @@
 
 
                         echo '<td>' . $ruolo_autore . ' <strong>' . $autoreRisposta . '</strong> ha risposto il ' . $dataRisposta . ' alle ' . $oraRisposta . '</td>';
-                        echo '<td>' . $testoRisposta . '</td>';
+                        echo nl2br('<td>' . $testoRisposta . '</td>');
 
                         // Voti: non disponibili per la propria risposta
                         if ($id_utente_risposta == $id_utente) {
@@ -381,7 +381,7 @@
                 echo '</td>';
 
                 echo '<td>Il cliente <strong>' . $autoreDomanda . '</strong> ha pubblicato la domanda il ' . $dataDomanda . ' alle ' . $oraDomanda . '</td>';
-                echo '<td>' . $testoDomanda . '</td>';
+                echo nl2br('<td>' . $testoDomanda . '</td>');
                 echo '<td>' . $utilitaValue . '</td>';
                 echo '<td>' . $supportoValue . '</td>';
 
@@ -479,7 +479,7 @@
 
 
                         echo '<td>' . $ruolo_autore . ' <strong>' . $autoreRisposta . '</strong> ha risposto il ' . $dataRisposta . ' alle ' . $oraRisposta . '</td>';
-                        echo '<td>' . $testoRisposta . '</td>';
+                        echo nl2br('<td>' . $testoRisposta . '</td>');
                         
                         // Voti: il gestore non può votare la propria risposta
                         if ($id_utente_risposta == $id_utente) {
@@ -586,7 +586,7 @@
                 echo '</td>';
 
                 echo '<td>Il cliente <strong>' . $autoreDomanda . '</strong> ha pubblicato la domanda il ' . $dataDomanda . ' alle ' . $oraDomanda . '</td>';
-                echo '<td>' . $testoDomanda . '</td>';
+                echo nl2br('<td>' . $testoDomanda . '</td>');
 
                 echo '</tr>';
 
@@ -631,7 +631,7 @@
                         echo '</td>';
 
                         echo '<td>' . $ruolo_autore . ' <strong>' . $autoreRisposta . '</strong> ha risposto il ' . $dataRisposta . ' alle ' . $oraRisposta . '</td>';
-                        echo '<td>' . $testoRisposta . '</td>';
+                        echo nl2br('<td>' . $testoRisposta . '</td>');
 
                         echo '</tr>';
                     }

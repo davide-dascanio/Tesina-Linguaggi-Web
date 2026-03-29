@@ -13,7 +13,27 @@
             //sono il cliente sicuramente
             $id_utente = $_SESSION['id'];
             $password = $_POST['password'];
+            $vecchia_password = $_POST['vecchia_password'];
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+            $query_pass = "SELECT passwd FROM utenti WHERE id = ?";
+            $stmt_pass = $connessione->prepare($query_pass);
+            $stmt_pass->bind_param("i", $id_utente);
+            $stmt_pass->execute();
+
+            $risultato = $stmt_pass->get_result();
+            $pass = $risultato->fetch_assoc();
+            $hash_attuale = $pass['passwd'];
+            $stmt_pass->close();
+
+            // Verifica che la vecchia password sia corretta
+            // password_verify confronta la vecchia password in chiaro inserita dall'utente 
+            // con l'hash salvato nel DB: restituisce true se corrispondono, false altrimenti
+            if (!password_verify($vecchia_password, $hash_attuale)) {
+                $_SESSION['errore_vecchia_pass'] = 'true';
+                header('Location: ../php/modifica_password.php');
+                exit(1);
+            }
         }
         
 

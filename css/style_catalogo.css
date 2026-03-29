@@ -141,7 +141,7 @@ body {
     position: relative; 
     display: inline-block; 
     cursor: pointer; 
-    left: 30px;
+    left: 20px;
     bottom: 1px;
 }
 
@@ -154,9 +154,7 @@ body {
     padding: 8px 12px; 
     position: absolute; 
     z-index: 99;
-    top: 150%; 
-    left: 50%; 
-    margin-left: -50px;
+    top: 130%; 
     opacity: 0; 
     transition: opacity 0.3s; 
     font-size: 13px; 
@@ -185,15 +183,17 @@ li {
 
 .prezzo { 
     margin-top: 3vh;
+    margin-bottom: -2px;
     margin-right: 5px;
-    margin-left: 20px;
+    margin-left: 36px;
     font-size: 24px; 
     font-weight: 700; 
     color: #1a1a2e; 
 }
 
 .linea { 
-    width: fit-content; 
+    width: fit-content;
+    margin-top: 20px;
     margin-left: 9vw; 
 }
 

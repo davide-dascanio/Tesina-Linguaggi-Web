@@ -4,7 +4,12 @@
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['autore'], $_POST['recensione'])) {
         $id_prodotto = $_POST['id_prodotto'];
         $autore = $_POST['autore'];
-        $recensione = $_POST['recensione'];
+
+        // I textarea su Windows mandano le andate a capo come \r\n
+        // Il DOMDocument quando salva nel XML converte il \r in &#13;
+        // Rimuoviamo quindi il \r prima di assegnare il testo al nodo XML
+        $recensione = str_replace("\r\n", "\n", $_POST['recensione']);
+        
         $tipologia = $_POST['tipologia'];
         $nome = $_POST['nome'];
         $id_utente = $_SESSION['id'];

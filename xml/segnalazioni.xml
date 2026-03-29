@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <segnalazioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="segnalazioni.xsd">
-  <segnalazione status="In Attesa" id_contributo="69c17169563ea" id_prodotto="2" autore_segnalazione="giulianeri@gmail.com">
-    <testo_contributo>Perché dovrei comprare da voi e non da un negozio serio?</testo_contributo>
-    <autore_contributo>paoloverdi@gmail.com</autore_contributo>
-    <testo_segnalazione>Domanda veramente poco appropriata e provocatoria</testo_segnalazione>
+  <segnalazione status="In Attesa" id_contributo="69b9a297acc10" id_prodotto="1" autore_segnalazione="paoloverdi@gmail.com">
+    <testo_contributo>La qualità dell’immagine è buona anche di notte?</testo_contributo>
+    <autore_contributo>luca@gmail.com</autore_contributo>
+    <testo_segnalazione>Fesseria</testo_segnalazione>
+  </segnalazione>
+  <segnalazione status="In Attesa" id_contributo="69b9a297acc10" id_prodotto="1" autore_segnalazione="paoloverdi@gmail.com">
+    <testo_contributo>La qualità dell’immagine è buona anche di notte?</testo_contributo>
+    <autore_contributo>luca@gmail.com</autore_contributo>
+    <testo_segnalazione>Follia Follia Follia Follia Follia Follia Follia Follia Follia Follia Follia Follia Follia Follia Follia Follia Follia Follia Follia Follia 
+
+
+Follia Follia Follia Follia Follia Follia Follia Follia Follia 
+Follia Follia 
+
+Follia Follia Follia </testo_segnalazione>
   </segnalazione>
 </segnalazioni>

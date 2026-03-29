@@ -1,6 +1,57 @@
 <?php
     session_start();
     require_once('../res/funzioni.php');
+
+
+    // Inizializza o ottieni il carrello dalla sessione
+    // Verifica se l'azione è "aggiungi_al_carrello"
+    if (isset($_POST['azione']) && $_POST['azione'] === 'aggiungi_al_carrello') {
+        $id_prodotto = $_POST['id_prodotto'];
+        $nome = $_POST['nome'];
+        $prezzo = $_POST['prezzo'];
+        $prezzoFinale = $_POST['prezzoFinale'];
+        $quantita = $_POST['quantita'];
+        $bonus = $_POST['bonus'];
+        
+        
+        if(!isset($_SESSION['carrello'])){
+            // Crea l'array variabile di sessione 'carrello'
+            // Aggiungi il prodotto al carrello subito
+            $_SESSION['carrello'][] = array(
+                'id_prodotto'  => $id_prodotto,
+                'nome'         => $nome,
+                'prezzo'       => $prezzo,
+                'bonus'        => $bonus,
+                'quantita'     => $quantita,
+                'prezzoFinale' => $prezzoFinale,
+            );
+        }else{
+            // Se il prodotto è già nel carrello, incrementa la quantità invece di duplicarlo
+            $trovato = false;
+            foreach ($_SESSION['carrello'] as $i => $item) {
+                if ($item['id_prodotto'] == $id_prodotto) {
+                    $_SESSION['carrello'][$i]['quantita'] += $quantita;
+                    $trovato = true;
+                    break;
+                }
+            }
+
+            if (!$trovato) {
+                // Aggiungi il prodotto al carrello
+                $_SESSION['carrello'][] = array(
+                    'id_prodotto'  => $id_prodotto,
+                    'nome'         => $nome,
+                    'prezzo'       => $prezzo,
+                    'bonus'        => $bonus,
+                    'quantita'     => $quantita,
+                    'prezzoFinale' => $prezzoFinale,
+                );
+            }
+        }
+
+        header("Location: catalogo_soundbar.php");
+        exit();
+    }
 ?>
 
 
@@ -173,14 +224,12 @@
                         echo '<td class="td">';
                         echo '<p class="des">' . $descrizione . '</p>';
 
-                        if ($sconto_generico_attivo == 1 || $bonus_generico_attivo == 1 || $bonus_personal_attivo == 1 || $sconto_personal_attivo == 1) {
-                            echo "<p id='successo'>Sconti/Bonus presenti su questo prodotto</p>";
-                        }
 
                         // TOOLTIP GESTORE: mostra TUTTI i 4 sconti/bonus con criteri (perchè li deve gestire)
                         echo '<table>';
                             echo '<tr>';
                                 echo '<td>';
+                                    echo "<p class='prezzo'>Prezzo base: " . $prezzo . " €</p>";    
                                     echo "<div class='tooltip'>";
                                         echo "<span class='tooltiptext'>";
                                             echo "<ul>";
@@ -209,11 +258,10 @@
                                                     echo "<li><strong>Bonus personalizzato:</strong> non attivo</li>";
                                             echo "</ul>";
                                         echo "</span>";
-                                        echo "<i id='simbolo' class='material-symbols-outlined'>info</i>";
-                                    echo "</div>";
-                                echo '</td>';
-                                echo '<td>';
-                                    echo "<p class = 'prezzo'>Prezzo base: " . $prezzo. " €</p>";
+                                        if ($sconto_generico_attivo == 1 || $bonus_generico_attivo == 1 || $bonus_personal_attivo == 1 || $sconto_personal_attivo == 1) {
+                                            echo "<i id='simbolo' class='material-symbols-outlined'>info</i><span style='font-size:13.3px;margin-right:16px' id='successo'> Gestisci gli sconti/bonus attivi su questo prodotto</span>";
+                                        }
+                                    echo "</div>";                        
                                 echo '</td>';
                             echo '</tr>';
                         echo '</table>';
@@ -252,62 +300,65 @@
                         echo '<td class="td">';
                         echo '<p class="des">' . $descrizione . '</p>';
 
-                        if ($dettaglio['sconto_generico']['applicato']       ||
-                            $dettaglio['sconto_personalizzato']['applicato'] ||
-                            $dettaglio['bonus_generico']['applicato']         ||
-                            $dettaglio['bonus_personalizzato']['applicato']) {
-                            echo "<p id='successo'>Sconti/Bonus attivi per te su questo prodotto</p>";
-                        }
+
 
                         // TOOLTIP CLIENTE: mostra solo ciò che si applica a lui
                         echo '<table>';
                             echo '<tr>';
                                 echo '<td>';
-                                    echo "<div class='tooltip'>";
-                                        echo "<span class='tooltiptext'>";
-                                            echo "<ul>";
-                                                echo "<li><strong>Prezzo base:</strong> $prezzo &euro;</li>";
 
-                                                // Sconto generico (se attivo si applica sempre al cliente)
-                                                if ($dettaglio['sconto_generico']['applicato']) {
-                                                    $v = $dettaglio['sconto_generico']['valore'];
-                                                    echo "<li><strong>Sconto generico:</strong> -$v%</li>";
-                                                }
+                                    if ($dettaglio['sconto_generico']['applicato']  ||
+                                        $dettaglio['sconto_personalizzato']['applicato'] ||
+                                        $dettaglio['bonus_generico']['applicato']  ||
+                                        $dettaglio['bonus_personalizzato']['applicato']) {
 
-                                                // Sconto personalizzato (solo se il cliente soddisfa il criterio)
-                                                if ($dettaglio['sconto_personalizzato']['applicato']) {
-                                                    $p = $dettaglio['sconto_personalizzato']['percentuale'];
-                                                    $et  = etichettaCriterio(
-                                                        $dettaglio['sconto_personalizzato']['tipo'],
-                                                        $dettaglio['sconto_personalizzato']['soglia'],
-                                                        $dettaglio['sconto_personalizzato']['data_rif']
-                                                    );
-                                                    echo "<li><strong>Sconto personalizzato:</strong> -$p% ($et)</li>";
-                                                }
+                                        echo "<p class = 'prezzo'>Prezzo Finale: " . $prezzoFinale . " €</p>";
 
-                                                // Bonus generico (se attivo si applica sempre al cliente)
-                                                if ($dettaglio['bonus_generico']['applicato']) {
-                                                    $v = $dettaglio['bonus_generico']['valore'];
-                                                    echo "<li><strong>Bonus dopo acquisto:</strong> +$v crediti</li>";
-                                                }
+                                        echo "<div class='tooltip'>";
+                                            echo "<span class='tooltiptext'>";
+                                                echo "<ul>";
+                                                    echo "<li><strong>Prezzo base:</strong> $prezzo &euro;</li>";
 
-                                                // Bonus personalizzato (solo se il cliente soddisfa il criterio)
-                                                if ($dettaglio['bonus_personalizzato']['applicato']) {
-                                                    $cr = $dettaglio['bonus_personalizzato']['crediti'];
-                                                    $et = etichettaCriterio(
-                                                        $dettaglio['bonus_personalizzato']['tipo'],
-                                                        $dettaglio['bonus_personalizzato']['soglia'],
-                                                        $dettaglio['bonus_personalizzato']['data_rif']
-                                                    );
-                                                    echo "<li><strong>Bonus personalizzato dopo acquisto:</strong> +$cr crediti ($et)</li>";
-                                                }
-                                            echo "</ul>";
-                                        echo "</span>";
-                                        echo "<i id='simbolo' class='material-symbols-outlined'>info</i>";
-                                    echo "</div>";
-                                echo '</td>';
-                                echo '<td>';
-                                    echo "<p class = 'prezzo'>Prezzo Finale: " . $prezzoFinale . " €</p>";
+                                                    // Sconto generico (se attivo si applica sempre al cliente)
+                                                    if ($dettaglio['sconto_generico']['applicato']) {
+                                                        $v = $dettaglio['sconto_generico']['valore'];
+                                                        echo "<li><strong>Sconto generico:</strong> -$v%</li>";
+                                                    }
+
+                                                    // Sconto personalizzato (solo se il cliente soddisfa il criterio)
+                                                    if ($dettaglio['sconto_personalizzato']['applicato']) {
+                                                        $p = $dettaglio['sconto_personalizzato']['percentuale'];
+                                                        $et  = etichettaCriterio(
+                                                            $dettaglio['sconto_personalizzato']['tipo'],
+                                                            $dettaglio['sconto_personalizzato']['soglia'],
+                                                            $dettaglio['sconto_personalizzato']['data_rif']
+                                                        );
+                                                        echo "<li><strong>Sconto personalizzato:</strong> -$p% ($et)</li>";
+                                                    }
+
+                                                    // Bonus generico (se attivo si applica sempre al cliente)
+                                                    if ($dettaglio['bonus_generico']['applicato']) {
+                                                        $v = $dettaglio['bonus_generico']['valore'];
+                                                        echo "<li><strong>Bonus dopo acquisto:</strong> +$v crediti</li>";
+                                                    }
+
+                                                    // Bonus personalizzato (solo se il cliente soddisfa il criterio)
+                                                    if ($dettaglio['bonus_personalizzato']['applicato']) {
+                                                        $cr = $dettaglio['bonus_personalizzato']['crediti'];
+                                                        $et = etichettaCriterio(
+                                                            $dettaglio['bonus_personalizzato']['tipo'],
+                                                            $dettaglio['bonus_personalizzato']['soglia'],
+                                                            $dettaglio['bonus_personalizzato']['data_rif']
+                                                        );
+                                                        echo "<li><strong>Bonus personalizzato dopo acquisto:</strong> +$cr crediti ($et)</li>";
+                                                    }
+                                                echo "</ul>";
+                                            echo "</span>";
+                                            echo "<i id='simbolo' class='material-symbols-outlined'>info</i><span style='font-size:13.3px;margin-right:16px' id='successo'> Abbiamo sconti/bonus attivi per te su questo prodotto!</span>";
+                                        echo "</div>";
+                                    }else{
+                                        echo '<p class="prezzo">Prezzo base: ' . $prezzo . '€</p>';
+                                    }
                                 echo '</td>';
                             echo '</tr>';
                         echo '</table>';
@@ -357,18 +408,14 @@
                         echo '<p class="des">' . $descrizione . '</p>';
 
 
-                        if ($sconto_generico_attivo == 1 || $bonus_generico_attivo == 1 || $bonus_personal_attivo == 1 || $sconto_personal_attivo == 1) {
-                            echo "<p id='successo'>Sconti/Bonus presenti su questo prodotto</p>";
-                        }
-
                         // TOOLTIP AMMINISTRATORE: mostra TUTTI i 4 sconti/bonus_generico_percentuale con criteri (perchè li deve supervisionare)
                         echo '<table>';
                             echo '<tr>';
                                 echo '<td>';
+                                    echo "<p class='prezzo'>Prezzo base: " . $prezzo . " €</p>";    
                                     echo "<div class='tooltip'>";
                                         echo "<span class='tooltiptext'>";
                                             echo "<ul>";
-                                                echo "<li><strong>Prezzo base:</strong> $prezzo &euro;</li>";
                                                 // Sconto generico
                                                 if ($sconto_generico_attivo == 1)
                                                     echo "<li><strong>Sconto generico:</strong> $sconto_generico_percentuale% (attivo)</li>";
@@ -380,13 +427,13 @@
                                                     echo "<li><strong>Sconto personalizzato:</strong> $sconto_personal_perc% &mdash; " . etichettaCriterio($sconto_personal_tipo, $sconto_personal_soglia, $sconto_personal_datrif) . " (attivo)</li>";
                                                 else
                                                     echo "<li><strong>Sconto personalizzato:</strong> non attivo</li>";
-                                                
+
                                                 // Bonus generico
                                                 if ($bonus_generico_attivo == 1)
                                                     echo "<li><strong>Bonus generico:</strong> $bonus_generico_crediti crediti (attivo)</li>";
                                                 else
                                                     echo "<li><strong>Bonus generico:</strong> non attivo</li>";
-
+                                                
                                                 // Bonus personalizzato
                                                 if ($bonus_personal_attivo == 1)
                                                     echo "<li><strong>Bonus personalizzato:</strong> $bonus_personal_crediti crediti &mdash; " . etichettaCriterio($bonus_personal_tipo, $bonus_personal_soglia, $bonus_personal_datrif) . " (attivo)</li>";
@@ -394,11 +441,10 @@
                                                     echo "<li><strong>Bonus personalizzato:</strong> non attivo</li>";
                                             echo "</ul>";
                                         echo "</span>";
-                                        echo "<i id='simbolo' class='material-symbols-outlined'>info</i>";
-                                    echo "</div>";
-                                echo '</td>';
-                                echo '<td>';
-                                    echo "<p class = 'prezzo'>Prezzo di vendita : " . $prezzoFinale . " €</p>";
+                                        if ($sconto_generico_attivo == 1 || $bonus_generico_attivo == 1 || $bonus_personal_attivo == 1 || $sconto_personal_attivo == 1) {
+                                            echo "<i id='simbolo' class='material-symbols-outlined'>info</i><span style='font-size:13.3px;margin-right:16px' id='successo'> Supervisiona gli sconti/bonus attivi su questo prodotto</span>";
+                                        }
+                                    echo "</div>";                        
                                 echo '</td>';
                             echo '</tr>';
                         echo '</table>';
@@ -447,64 +493,20 @@
             ?>
 
 
-            <?php
-            // Inizializza o ottieni il carrello dalla sessione
-            // Verifica se l'azione è "aggiungi_al_carrello"
-            if (isset($_POST['azione']) && $_POST['azione'] === 'aggiungi_al_carrello') {
-                $id_prodotto = $_POST['id_prodotto'];
-                $nome = $_POST['nome'];
-                $prezzo = $_POST['prezzo'];
-                $prezzoFinale = $_POST['prezzoFinale'];
-                $quantita = $_POST['quantita'];
-                $bonus = $_POST['bonus'];
-                
-                
-                if(!isset($_SESSION['carrello'])){
-                    // Aggiungi il prodotto al carrello subito
-                    $_SESSION['carrello'][] = array(
-                        'id_prodotto'  => $id_prodotto,
-                        'nome'         => $nome,
-                        'prezzo'       => $prezzo,
-                        'bonus'        => $bonus,
-                        'quantita'     => $quantita,
-                        'prezzoFinale' => $prezzoFinale,
-                    );
-                }else{
-                    // Se il prodotto è già nel carrello, incrementa la quantità invece di duplicarlo
-                    $trovato = false;
-                    foreach ($_SESSION['carrello'] as $i => $item) {
-                        if ($item['id_prodotto'] == $id_prodotto) {
-                            $_SESSION['carrello'][$i]['quantita'] += $quantita;
-                            $trovato = true;
-                            break;
-                        }
-                    }
-
-                    if (!$trovato) {
-                        // Aggiungi il prodotto al carrello
-                        $_SESSION['carrello'][] = array(
-                            'id_prodotto'  => $id_prodotto,
-                            'nome'         => $nome,
-                            'prezzo'       => $prezzo,
-                            'bonus'        => $bonus,
-                            'quantita'     => $quantita,
-                            'prezzoFinale' => $prezzoFinale,
-                        );
-                    }
-                }
-                
-            }
-            ?>
-
-
-
             <script>
                 // Quando il documento è caricato
+                // $(document).ready()
+                // Tutto il codice è racchiuso qui dentro: significa che viene eseguito solo dopo che la pagina HTML è stata
+                // completamente caricata nel browser. Senza si rischia di cercare elementi
+                // ($('.prodotto'), ecc.) che non esistono ancora nel DOM.
+
                 $(document).ready(function() {
 
-
-                    // Ricerca per nome
+                    // Ricerca per nome cliccando il bottone
                     // Associo un'azione al bottone di ricerca "btn_stilizzato"
+                    // Quando clicco il bottone prendo il testo nella barra di ricerca, 
+                    // e uso .toggle() per scorrere tutti i prodotti e mostrare/nascondere ognuno in base
+                    // a se il suo nome contiene il testo cercato
                     $('.btn_stilizzato').on('click', function() {
                         var searchText = $('.search-input').val().toLowerCase();
                         $('.prodotto').each(function() {
@@ -512,11 +514,21 @@
                             $(this).toggle(titolo.indexOf(searchText) !== -1);
                         });
                     });
-
-                    // Ricerca per nome
+                    
+                    // Ricerca per nome in tempo reale
+                    // Si attiva ad ogni tasto premuto quindi la ricerca si aggiorna mentre scrivo
                     // Associo un'azione alla barra di ricerca quando scrivo qualcosa sulla tastiera
                     $('.search-input').on('keyup', function() {
                         var searchText = $(this).val().toLowerCase();
+
+
+                        // Se ha meno di 2 caratteri mostro tutti i prodotti e non cerco
+                        if (searchText.length < 2) {
+                            $('.prodotto').show();
+                            return;
+                        }
+
+
                         $('.prodotto').each(function() {
                             var titolo = $(this).find('.nome').text().toLowerCase();
                             $(this).toggle(titolo.indexOf(searchText) !== -1);
@@ -526,6 +538,10 @@
 
 
                     // Ordinamento
+                    // Quando cambio l'opzione nella select mi prendo tutti i prodotti,
+                    // li metto in un array e li ordino in base all'opzione scelta:
+                    // per prezzo leggo l'attributo data-prezzo e faccio una sottrazione,
+                    // per nome leggo il testo del .nome e uso localeCompare
                     $('#ordina').on('change', function() {
                         var selectedOption = $(this).val();
 
@@ -544,6 +560,8 @@
                         });
 
 
+                        // Rimuovo i prodotti dal DOM senza distruggerli con detach()
+                        // e li reinserisco nel contenitore nel nuovo ordine
                         var cont = $('.cont');
                         $('.prodotto').detach();
                         $.each(prodottiArray, function(i, prodotto) {

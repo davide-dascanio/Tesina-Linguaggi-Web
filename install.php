@@ -1,11 +1,39 @@
 <?php
-
     error_reporting(E_ALL);
 
-    //Connessione al database e sua creazione
-    require_once("res/connessione2.php");
+    //dati relativi al db
+    require_once("res/datigenerali.php");
 
-    //creazione tabella 'utenti'
+    // Effettuazione della connessione al database
+    $connessione = new mysqli($host, $username, $password);
+
+    // Controllo della connessione
+    if (mysqli_connect_errno()) {
+        printf("Problemi con la connessione al db: %s\n", mysqli_connect_error());
+        exit();
+    }
+
+
+    // Creazione del database
+    $queryCreazioneDatabase = "CREATE DATABASE IF NOT EXISTS $db_name";
+
+    // Il risultato della query va in $resultQ
+    $resultQ = mysqli_query($connessione, $queryCreazioneDatabase);
+    if ($resultQ) {
+        printf("Database creato <br />\n");
+    }
+    else{
+        printf("Errore nella creazione del database <br />\n");
+        exit();
+    }
+
+
+
+    // Selezione del database
+    $connessione->select_db($db_name);
+
+
+    // Creazione tabella 'utenti'
     $sqlQuery = "CREATE TABLE if not exists $utenti_table_name ( 
         id INT AUTO_INCREMENT PRIMARY KEY,
         nome VARCHAR(50) NOT NULL,
@@ -26,7 +54,7 @@
     )"; 
 
 
-    //verifica creazione tabella 'utenti'
+    // Verifica creazione tabella 'utenti'
     if ($resultQ = mysqli_query($connessione, $sqlQuery)){
         printf("La tabella 'utenti' è stata creata <br />\n");
         header("Location:php/index.php");
@@ -36,7 +64,7 @@
     }
 
 
-    //popolamento della tabella 'utenti'
+    // Popolamento della tabella 'utenti'
     $sql = "INSERT INTO $utenti_table_name (`id`,`nome`,`cognome`, `email`, `passwd`,`crediti`,`data_di_nascita`,`indirizzo_di_residenza`,`codice_fiscale`,`cellulare`,`cliente`,`ammin`,`gestore`,`reputazione`,`ban`,`data_registrazione`) VALUES
     ('1','Davide','D\'Ascanio', 'davidedascanio@gmail.com', '" . password_hash('Davide1234!', PASSWORD_DEFAULT) . "','0', '2001-06-14', 'Via Muzio Clementi', 'FRNLNZ01H14H501Z','3339553001','0','1','0','11', '0','2022-06-14'),
     ('2','Mario', 'Rossi', 'mariorossi@gmail.com', '" . password_hash('Mario1234!', PASSWORD_DEFAULT) . "','0', '2001-04-11','Via A.Stradivari 4', 'DLLFRC01D11H501P','3293321366','0','0','1','11','0','2022-06-14'),
@@ -45,7 +73,7 @@
     ('5','Luca','Paoli', 'luca@gmail.com', '" . password_hash('Luca1234!', PASSWORD_DEFAULT) . "','0', '2001-06-14', 'Via Andrea Doria', 'FRNLNZ01H14H753P','3339553123','1','0','0','1', '0','2023-04-14')";
 
 
-    //verifica popolamento tabella 'utenti'
+    // Verifica popolamento tabella 'utenti'
     if ($resultQ = mysqli_query($connessione, $sql))
         printf("Tabella 'utenti' popolata correttamente <br />\n");
     else {

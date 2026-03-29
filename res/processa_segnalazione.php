@@ -10,7 +10,11 @@
         $nome = $_POST['nome'];
         $tipologia = $_POST['tipologia'];
         $autore_segnalazione = $_POST['autore_segnalazione'];
-        $testo_segnalazione = $_POST['testo_segnalazione'];
+
+        // I textarea su Windows mandano le andate a capo come \r\n
+        // Il DOMDocument quando salva nel XML converte il \r in &#13;
+        // Rimuoviamo quindi il \r prima di assegnare il testo al nodo XML
+        $testo_segnalazione = str_replace("\r\n", "\n", $_POST['testo_segnalazione']);
 
 
         // Carica il file XML

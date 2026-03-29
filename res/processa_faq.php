@@ -2,9 +2,14 @@
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Verifica se 'faq_question' e 'faq_answer' sono impostati
     if (isset($_POST['faq_question']) && isset($_POST['faq_answer'])) {
-        $faq_question = $_POST['faq_question'];
-        $faq_answer = $_POST['faq_answer'];
 
+        // I textarea su Windows mandano le andate a capo come \r\n
+        // Il DOMDocument quando salva nel XML converte il \r in &#13;
+        // Rimuoviamo quindi il \r prima di assegnare il testo al nodo XML
+        $faq_question = str_replace("\r\n", "\n", $_POST['faq_question']);
+        $faq_answer = str_replace("\r\n", "\n", $_POST['faq_answer']);
+
+        
         $xmlFile = '../xml/faq.xml';
 
         if (file_exists($xmlFile)) {

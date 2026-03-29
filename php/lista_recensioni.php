@@ -138,7 +138,7 @@
                 echo '</td>';
 
                 echo '<td>Il cliente <strong>' . $autoreRecensione . '</strong> ha pubblicato la recensione il ' . $dataRecensione . ' alle ' . $oraRecensione . '</td>';
-                echo '<td>' . $testoRecensione . '</td>';
+                echo nl2br('<td>' . $testoRecensione . '</td>');
 
 
                 // Voti: non disponibili per la propria recensione
@@ -247,7 +247,7 @@
                 echo '</td>';
 
                 echo '<td>Il cliente <strong>' . $autoreRecensione . '</strong> ha pubblicato la recensione il ' . $dataRecensione . ' alle ' . $oraRecensione . '</td>';
-                echo '<td>' . $testoRecensione . '</td>';
+                echo nl2br('<td>' . $testoRecensione . '</td>');
                 echo '<td>' . $utilitaValue . '</td>';
                 echo '<td>' . $supportoValue . '</td>';
 
@@ -348,7 +348,7 @@
                 echo '</td>';
 
                 echo '<td>Il cliente <strong>' . $autoreRecensione . '</strong> ha pubblicato la recensione il ' . $dataRecensione . ' alle ' . $oraRecensione . '</td>';
-                echo '<td>' . $testoRecensione . '</td>';
+                echo nl2br('<td>' . $testoRecensione . '</td>');
                 
                 echo '</tr>';
 
