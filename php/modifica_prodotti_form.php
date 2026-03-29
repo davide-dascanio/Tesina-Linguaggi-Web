@@ -79,7 +79,7 @@
                     unset($_SESSION['errore_nome_esistente']);
                 }
                 if(isset($_SESSION['errore_immagine']) && $_SESSION['errore_immagine'] == 'true'){
-                    echo '<h2>Errore nel caricamneto dell\' immagine!!!</h2>';
+                    echo '<h2>Errore nel caricamneto dell\'immagine!!!</h2>';
                     unset($_SESSION['errore_immagine']);
                 }
 
@@ -110,7 +110,7 @@
                     </tr>
                     <tr>
                         <td><label>Immagine:</label></td>
-                        <td><input type="file" class="input" name="immagine" accept="image/*"></td>
+                        <td><input type="file" class="input" name="immagine" accept="image/*"></td> <!-- accept="image/*" filtra i file selezionabili, mostrando solo i file immagine  --> 
                     </tr>
                 </table>
                 <button class="btn" style="margin-top:1vw;" type="submit">Salva Modifiche</button>

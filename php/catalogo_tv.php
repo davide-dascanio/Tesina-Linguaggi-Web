@@ -222,7 +222,7 @@
 
                         // Colonna info
                         echo '<td class="td">';
-                        echo '<p class="des">' . $descrizione . '</p>';
+                        echo nl2br('<p class="des">' . $descrizione . '</p>');
 
 
                         // TOOLTIP GESTORE: mostra TUTTI i 4 sconti/bonus con criteri (perchè li deve gestire)
@@ -298,7 +298,7 @@
 
                         // Colonna info
                         echo '<td class="td">';
-                        echo '<p class="des">' . $descrizione . '</p>';
+                        echo nl2br('<p class="des">' . $descrizione . '</p>');
 
 
 
@@ -405,7 +405,7 @@
 
                         // Colonna info
                         echo '<td class="td">';
-                        echo '<p class="des">' . $descrizione . '</p>';
+                        echo nl2br('<p class="des">' . $descrizione . '</p>');
 
 
                         // TOOLTIP AMMINISTRATORE: mostra TUTTI i 4 sconti/bonus_generico_percentuale con criteri (perchè li deve supervisionare)
@@ -475,7 +475,7 @@
 
                     // Colonna info
                     echo '<td class="td">';
-                    echo '<p class="des">' . $descrizione . '</p>';
+                    echo nl2br('<p class="des">' . $descrizione . '</p>');
                     echo '<p class="prezzo">Prezzo: ' . $prezzo . '€</p>';
                     echo '<a href="login_cliente.php"><span id="cart" class="material-symbols-outlined">add_shopping_cart</span></a>';
                     echo '</td>';
