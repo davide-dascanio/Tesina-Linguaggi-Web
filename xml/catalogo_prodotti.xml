@@ -145,7 +145,7 @@
       </bonus_personalizzato>
     </sconti_bonus>
     <domande>
-      <domanda id_prodotto="2" id_utente="5" segnalato="1">
+      <domanda id_prodotto="2" id_utente="5" segnalato="0">
         <autore>luca@gmail.com</autore>
         <testo>Perché dovrei comprare da voi e non da un negozio serio?</testo>
         <id_domanda>69bc32adc64b9</id_domanda>

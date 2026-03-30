@@ -4,7 +4,12 @@
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         $id_contributo = $_POST['id_contributo'];
-        $testo_contributo = $_POST['testo_contributo'];
+
+        // I textarea su Windows mandano le andate a capo come \r\n
+        // Il DOMDocument quando salva nel XML converte il \r in &#13;
+        // Rimuoviamo quindi il \r prima di assegnare il testo al nodo XML
+        $testo_contributo = str_replace("\r\n", "\n", $_POST['testo_contributo']);
+        
         $id_prodotto = $_POST['id_prodotto'];
         $autore_contributo = $_POST['autore_contributo'];
         $nome = $_POST['nome'];
