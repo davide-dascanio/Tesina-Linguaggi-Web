@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <acquisti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="storico_acquisti.xsd">
   <acquisto id_utente="4">
-    <data>2026-04-01</data>
+    <data>2023-04-01</data>
     <ora>20:19:55</ora>
     <id_prodotto>1</id_prodotto>
     <nome_prodotto>Samsung Crystal UHD 50</nome_prodotto>
@@ -12,7 +12,7 @@
     <prezzo_totale>450.00</prezzo_totale>
   </acquisto>
   <acquisto id_utente="4">
-    <data>2026-04-01</data>
+    <data>2023-04-01</data>
     <ora>20:20:12</ora>
     <id_prodotto>8</id_prodotto>
     <nome_prodotto>Vogel Supporto TV Orientabile</nome_prodotto>

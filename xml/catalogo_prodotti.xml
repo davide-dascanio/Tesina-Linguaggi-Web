@@ -21,7 +21,7 @@
         <crediti>4</crediti>
         <criterio tipo="mesi_registrato">
           <soglia>9</soglia>
-          <data_riferimento></data_riferimento>
+          <data_riferimento/>
         </criterio>
       </bonus_personalizzato>
     </sconti_bonus>
@@ -241,18 +241,18 @@ Evviva le tv. Cordiali saluti
     <sconti_bonus>
       <sconto_generico attivo="1">5</sconto_generico>
       <sconto_personalizzato attivo="1">
-        <percentuale>6</percentuale>
-        <criterio tipo="reputazione">
-          <soglia>6</soglia>
+        <percentuale>5</percentuale>
+        <criterio tipo="crediti_totali">
+          <soglia>450</soglia>
           <data_riferimento/>
         </criterio>
       </sconto_personalizzato>
       <bonus_generico attivo="0">0</bonus_generico>
       <bonus_personalizzato attivo="1">
-        <crediti>16</crediti>
-        <criterio tipo="anni_registrato">
-          <soglia>2</soglia>
-          <data_riferimento/>
+        <crediti>5</crediti>
+        <criterio tipo="crediti_da_data">
+          <soglia>50</soglia>
+          <data_riferimento>2026-01-28</data_riferimento>
         </criterio>
       </bonus_personalizzato>
     </sconti_bonus>
@@ -366,11 +366,11 @@ Evviva le tv. Cordiali saluti
     <immagine>../img/mount_meliconi_slim.png</immagine>
     <sconti_bonus>
       <sconto_generico attivo="0">0</sconto_generico>
-      <sconto_personalizzato attivo="0">
-        <percentuale>0</percentuale>
-        <criterio tipo="nessuno">
-          <soglia>0</soglia>
-          <data_riferimento/>
+      <sconto_personalizzato attivo="1">
+        <percentuale>5</percentuale>
+        <criterio tipo="anni_registrato">
+          <soglia>1</soglia>
+          <data_riferimento></data_riferimento>
         </criterio>
       </sconto_personalizzato>
       <bonus_generico attivo="0">0</bonus_generico>
