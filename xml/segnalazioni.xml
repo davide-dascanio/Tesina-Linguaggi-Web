@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <segnalazioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="segnalazioni.xsd">
-  <segnalazione status="In Attesa" id_contributo="69b9a297acc10" id_prodotto="1" autore_segnalazione="paoloverdi@gmail.com">
-    <testo_contributo>La qualità dell’immagine è buona anche di notte?</testo_contributo>
+  <segnalazione status="In Attesa" id_contributo="69bc32adc64b9" id_prodotto="2" autore_segnalazione="paoloverdi@gmail.com">
+    <testo_contributo>Perché dovrei comprare da voi e non da un negozio serio?</testo_contributo>
     <autore_contributo>luca@gmail.com</autore_contributo>
-    <testo_segnalazione>Fesseria Fesseria Fesseria Fesseria Fesseria Fesseria Fesseria Fesseria Fesseria Fesseria Fesseria Fesseria Fesseria Fesseria 
+    <testo_segnalazione>Inappropriato e provocatorio.
 
-Fesseria 
-Fesseria Fesseria Fesseria 
+Segnalato prontamente.
 
 
-Fesseria 
+Applicare provvedimenti.
 </testo_segnalazione>
   </segnalazione>
 </segnalazioni>

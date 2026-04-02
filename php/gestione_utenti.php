@@ -97,8 +97,16 @@
                         echo '<td style="width: 80px;">' . $row['data_di_nascita'] . '</td>';
                         echo '<td>' . $row['cellulare'] . '</td>';
                         echo '<td><a href="modifica_utente.php?id=' . $row['id'] . '"><span id="edit" class="material-symbols-outlined">edit</span></a></td>';
-                        echo '<td><a href="modifica_password.php?id=' . $row['id'] . '"><span id="edit" class="material-symbols-outlined">key</span></a></td>';
 
+                        if (($row['id'] == $_SESSION['id']) && $row['ammin'] == 1){
+                            echo '<td><a href="modifica_password.php?id=' . $row['id'] . '"><span id="edit" class="material-symbols-outlined">key</span></a></td>';
+                        }elseif ($row['ammin'] == 1){
+                            echo '<td>---</td>';
+                        }else{
+                            echo '<td><a href="modifica_password.php?id=' . $row['id'] . '"><span id="edit" class="material-symbols-outlined">key</span></a></td>';
+                        }
+                        
+                        
                         if ($row['ammin'] == 1) {
                             echo '<td>---</td>';
                         }else {

@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <requests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="requests.xsd">
-  <request status="Approvata" id_utente="3">
+  <request status="Approvata" id_utente="4">
     <email>paoloverdi@gmail.com</email>
-    <importo>500.00</importo>
+    <importo>1000.00</importo>
+  </request>
+  <request status="Approvata" id_utente="5">
+    <email>giulianeri@gmail.com</email>
+    <importo>700.00</importo>
+  </request>
+  <request status="Approvata" id_utente="6">
+    <email>luca@gmail.com</email>
+    <importo>800.00</importo>
   </request>
 </requests>

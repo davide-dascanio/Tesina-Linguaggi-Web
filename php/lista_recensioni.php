@@ -41,6 +41,10 @@
         echo '<h2 id="successo">Segnalazione inviata con successo. Attendere l\'approvazione del gestore...</h2>';
         unset($_SESSION['successo_segnalazione']);
     }
+    if(isset($_SESSION['errore_segnalazione']) && $_SESSION['errore_segnalazione'] == 'true'){
+        echo '<h2>Hai già segnalato questo contributo. Attendere l\'approvazione del gestore...</h2>';
+        unset($_SESSION['errore_segnalazione']);
+    }
     if(isset($_SESSION['successo_eliminazione']) && $_SESSION['successo_eliminazione'] == 'true'){
         echo '<h2 id="successo">Eliminazione effettuata con successo.</h2>';
         unset($_SESSION['successo_eliminazione']);

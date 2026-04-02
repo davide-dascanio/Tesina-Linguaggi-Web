@@ -5,9 +5,10 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Verifica che tutti i campi necessari siano stati compilati
-        if (isset($_POST['id_contributo'], $_POST['id_prodotto'], $_POST['action'])) {
+        if (isset($_POST['id_contributo'], $_POST['id_prodotto'], $_POST['action'], $_POST['autore_segnalazione'])) {
             
             $idContributo = $_POST['id_contributo'];
+            $autoreSegnalazione = $_POST['autore_segnalazione'];
             $idProdotto = $_POST['id_prodotto'];
             $action = $_POST['action'];
 
@@ -22,7 +23,8 @@
             $segnalazioneTarget = null;
 
             foreach ($segnalazioni as $segnalazione) {
-                if ($segnalazione->getAttribute('id_contributo') == $idContributo) {
+                if ($segnalazione->getAttribute('id_contributo') == $idContributo &&
+                    $segnalazione->getAttribute('autore_segnalazione') == $autoreSegnalazione) { //per evitare che una segnalazione rimanga appesa in attesa
                     $segnalazioneTarget = $segnalazione;
                     break;
                 }

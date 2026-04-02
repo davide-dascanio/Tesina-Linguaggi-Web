@@ -210,7 +210,7 @@
                         echo '<a class="btn1"style="margin-left:10vw;" title="Lista delle domande" href="lista_domande.php?id_prodotto=' . $id_prodotto . '&nome=' . $nome .'&tipologia='. $tipologia . '">Lista delle domande</a>';
                         echo '<a class="btn1" style="margin-left:10vw;"title="Lista delle recensioni" href="lista_recensioni.php?id_prodotto=' . $id_prodotto . '&nome=' . $nome .'&tipologia='. $tipologia . '">Liste delle recensioni</a>';
                         echo '<a class="btn1" style="margin-left:10vw;" href="modifica_prodotti_form.php?id_prodotto=' . $id_prodotto . '&tipologia=' . $tipologia . '">Modifica prodotto</a>';
-                        echo '<a class="btn1" style="margin-left:10vw;" href="gestisci_sconti_form.php?id_prodotto=' . $id_prodotto . '&tipologia=' . $tipologia . '">Gestisci Sconti</a>';
+                        echo '<a class="btn1" style="margin-left:10vw;" href="gestisci_sconti_form.php?id_prodotto=' . $id_prodotto . '&tipologia=' . $tipologia . '">Gestisci Sconti e Bonus</a>';
                         echo '</td>';
 
                         // Colonna immagine
@@ -229,7 +229,7 @@
                         echo '<table>';
                             echo '<tr>';
                                 echo '<td>';
-                                    echo "<p class='prezzo'>Prezzo base: " . $prezzo . " €</p>";    
+                                    echo "<p class='prezzo'>Prezzo: " . $prezzo . " €</p>";    
                                     echo "<div class='tooltip'>";
                                         echo "<span class='tooltiptext'>";
                                             echo "<ul>";
@@ -357,7 +357,7 @@
                                             echo "<i id='simbolo' class='material-symbols-outlined'>info</i><span style='font-size:13.3px;margin-right:16px' id='successo'> Abbiamo sconti/bonus attivi per te su questo prodotto!</span>";
                                         echo "</div>";
                                     }else{
-                                        echo '<p class="prezzo">Prezzo base: ' . $prezzo . '€</p>';
+                                        echo '<p class="prezzo">Prezzo: ' . $prezzo . '€</p>';
                                     }
                                 echo '</td>';
                             echo '</tr>';
@@ -412,7 +412,7 @@
                         echo '<table>';
                             echo '<tr>';
                                 echo '<td>';
-                                    echo "<p class='prezzo'>Prezzo base: " . $prezzo . " €</p>";    
+                                    echo "<p class='prezzo'>Prezzo: " . $prezzo . " €</p>";    
                                     echo "<div class='tooltip'>";
                                         echo "<span class='tooltiptext'>";
                                             echo "<ul>";

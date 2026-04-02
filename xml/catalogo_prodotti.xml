@@ -18,28 +18,28 @@
       </sconto_personalizzato>
       <bonus_generico attivo="1">5</bonus_generico>
       <bonus_personalizzato attivo="1">
-        <crediti>10</crediti>
+        <crediti>4</crediti>
         <criterio tipo="mesi_registrato">
-          <soglia>1</soglia>
-          <data_riferimento/>
+          <soglia>9</soglia>
+          <data_riferimento></data_riferimento>
         </criterio>
       </bonus_personalizzato>
     </sconti_bonus>
     <domande>
-      <domanda id_prodotto="1" id_utente="3" segnalato="0">
+      <domanda id_prodotto="1" id_utente="4" segnalato="0">
         <autore>paoloverdi@gmail.com</autore>
         <testo>Questa TV è adatta per Netflix e YouTube?</testo>
         <id_domanda>69b99b668a293</id_domanda>
         <data>2026-03-17</data>
         <ora>19:20:22</ora>
         <utilita>
-          <valore id_utente="4" reputazione_Vot="5">1</valore>
+          <valore id_utente="5" reputazione_Vot="4">1</valore>
         </utilita>
         <supporto>
-          <valore id_utente="4" reputazione_Vot="5">2</valore>
+          <valore id_utente="5" reputazione_Vot="4">2</valore>
         </supporto>
         <risposte>
-          <risposta id_prodotto="1" id_utente="4" segnalato="0">
+          <risposta id_prodotto="1" id_utente="5" segnalato="0">
             <id_risposta>69b99bed727c0</id_risposta>
             <id_domanda>69b99b668a293</id_domanda>
             <autore>giulianeri@gmail.com</autore>
@@ -47,13 +47,15 @@
             <ora>19:22:37</ora>
             <testo>Sì, la TV supporta le principali app di streaming come Netflix e YouTube.</testo>
             <utilita>
-              <valore id_utente="3" reputazione_Vot="1">2</valore>
+              <valore id_utente="4" reputazione_Vot="1">1</valore>
+              <valore id_utente="2" reputazione_Vot="11">2</valore>
             </utilita>
             <supporto>
-              <valore id_utente="3" reputazione_Vot="1">2</valore>
+              <valore id_utente="4" reputazione_Vot="1">2</valore>
+              <valore id_utente="2" reputazione_Vot="11">2</valore>
             </supporto>
           </risposta>
-          <risposta id_prodotto="1" id_utente="2" segnalato="0">
+          <risposta id_prodotto="1" id_utente="3" segnalato="0">
             <id_risposta>69b9a5cdee524</id_risposta>
             <id_domanda>69b99b668a293</id_domanda>
             <autore>mariorossi@gmail.com</autore>
@@ -61,28 +63,28 @@
             <ora>20:04:45</ora>
             <testo>Si è perfetta per questo. Inoltre è dotata di Wi-Fi integrato per una connessione veloce e stabile.</testo>
             <utilita>
-              <valore id_utente="3" reputazione_Vot="1">3</valore>
+              <valore id_utente="4" reputazione_Vot="1">3</valore>
+              <valore id_utente="5" reputazione_Vot="4">2</valore>
+              <valore id_utente="2" reputazione_Vot="11">3</valore>
             </utilita>
             <supporto>
-              <valore id_utente="3" reputazione_Vot="1">2</valore>
+              <valore id_utente="4" reputazione_Vot="1">2</valore>
+              <valore id_utente="5" reputazione_Vot="4">2</valore>
+              <valore id_utente="2" reputazione_Vot="11">3</valore>
             </supporto>
           </risposta>
         </risposte>
       </domanda>
-      <domanda id_prodotto="1" id_utente="5" segnalato="0">
+      <domanda id_prodotto="1" id_utente="6" segnalato="0">
         <autore>luca@gmail.com</autore>
         <testo>La qualità dell’immagine è buona anche di notte?</testo>
         <id_domanda>69b9a297acc10</id_domanda>
         <data>2026-03-17</data>
         <ora>19:51:03</ora>
-        <utilita>
-          <valore id_utente="3" reputazione_Vot="1">1</valore>
-        </utilita>
-        <supporto>
-          <valore id_utente="3" reputazione_Vot="1">2</valore>
-        </supporto>
+        <utilita/>
+        <supporto/>
         <risposte>
-          <risposta id_prodotto="1" id_utente="2" segnalato="0">
+          <risposta id_prodotto="1" id_utente="3" segnalato="0">
             <id_risposta>69b9a2f146551</id_risposta>
             <id_domanda>69b9a297acc10</id_domanda>
             <autore>mariorossi@gmail.com</autore>
@@ -90,31 +92,27 @@
             <ora>19:52:33</ora>
             <testo>Offre una buona qualità d’immagine anche in ambienti poco illuminati.</testo>
             <utilita>
-              <valore id_utente="4" reputazione_Vot="5">2</valore>
-              <valore id_utente="5" reputazione_Vot="4">3</valore>
-              <valore id_utente="3" reputazione_Vot="5">1</valore>
+              <valore id_utente="6" reputazione_Vot="3">2</valore>
             </utilita>
             <supporto>
-              <valore id_utente="4" reputazione_Vot="5">3</valore>
-              <valore id_utente="5" reputazione_Vot="4">2</valore>
-              <valore id_utente="3" reputazione_Vot="5">1</valore>
+              <valore id_utente="6" reputazione_Vot="3">2</valore>
             </supporto>
           </risposta>
         </risposte>
       </domanda>
     </domande>
     <recensioni>
-      <recensione id_prodotto="1" id_utente="3" segnalato="0">
+      <recensione id_prodotto="1" id_utente="4" segnalato="0">
         <autore>paoloverdi@gmail.com</autore>
         <testo>Qualità dell’immagine davvero ottima, facile da configurare. Consigliata!</testo>
         <data>2026-03-17</data>
         <ora>21:02:49</ora>
         <id_recensione>69b9b369e653c</id_recensione>
         <utilita>
-          <valore id_utente="5" reputazione_Vot="4">3</valore>
+          <valore id_utente="5" reputazione_Vot="4">2</valore>
         </utilita>
         <supporto>
-          <valore id_utente="5" reputazione_Vot="4">1</valore>
+          <valore id_utente="5" reputazione_Vot="4">2</valore>
         </supporto>
       </recensione>
     </recensioni>
@@ -145,17 +143,23 @@
       </bonus_personalizzato>
     </sconti_bonus>
     <domande>
-      <domanda id_prodotto="2" id_utente="5" segnalato="0">
+      <domanda id_prodotto="2" id_utente="6" segnalato="1">
         <autore>luca@gmail.com</autore>
         <testo>Perché dovrei comprare da voi e non da un negozio serio?</testo>
         <id_domanda>69bc32adc64b9</id_domanda>
         <data>2026-03-19</data>
         <ora>18:30:21</ora>
-        <utilita/>
-        <supporto/>
+        <utilita>
+          <valore id_utente="4" reputazione_Vot="1">1</valore>
+          <valore id_utente="5" reputazione_Vot="4">1</valore>
+        </utilita>
+        <supporto>
+          <valore id_utente="4" reputazione_Vot="1">1</valore>
+          <valore id_utente="5" reputazione_Vot="4">1</valore>
+        </supporto>
         <risposte/>
       </domanda>
-      <domanda id_prodotto="2" id_utente="3" segnalato="0">
+      <domanda id_prodotto="2" id_utente="4" segnalato="0">
         <autore>paoloverdi@gmail.com</autore>
         <testo>La TV ha un buon rapporto qualità-prezzo?
 Se si fatemi sapere perché sono molto interessato all'acquisto di questa tv.
@@ -164,10 +168,16 @@ Grazie e cordiali saluti.</testo>
         <id_domanda>69c80b39703c8</id_domanda>
         <data>2026-03-28</data>
         <ora>18:09:13</ora>
-        <utilita/>
-        <supporto/>
+        <utilita>
+          <valore id_utente="5" reputazione_Vot="4">2</valore>
+          <valore id_utente="2" reputazione_Vot="11">2</valore>
+        </utilita>
+        <supporto>
+          <valore id_utente="5" reputazione_Vot="4">1</valore>
+          <valore id_utente="2" reputazione_Vot="11">1</valore>
+        </supporto>
         <risposte>
-          <risposta id_prodotto="2" id_utente="4" segnalato="0">
+          <risposta id_prodotto="2" id_utente="5" segnalato="0">
             <id_risposta>69c80f8fcae6e</id_risposta>
             <id_domanda>69c80b39703c8</id_domanda>
             <autore>giulianeri@gmail.com</autore>
@@ -179,8 +189,14 @@ Inoltre è davvero un piacere aiutarti.
 
 Evviva le tv. Cordiali saluti
 </testo>
-            <utilita/>
-            <supporto/>
+            <utilita>
+              <valore id_utente="4" reputazione_Vot="1">2</valore>
+              <valore id_utente="2" reputazione_Vot="11">3</valore>
+            </utilita>
+            <supporto>
+              <valore id_utente="4" reputazione_Vot="1">2</valore>
+              <valore id_utente="2" reputazione_Vot="11">2</valore>
+            </supporto>
           </risposta>
         </risposte>
       </domanda>
@@ -241,41 +257,47 @@ Evviva le tv. Cordiali saluti
       </bonus_personalizzato>
     </sconti_bonus>
     <domande>
-      <domanda id_prodotto="4" id_utente="4" segnalato="0">
+      <domanda id_prodotto="4" id_utente="5" segnalato="0">
         <autore>giulianeri@gmail.com</autore>
         <testo>Serve un subwoofer o basta da sola?</testo>
         <id_domanda>69b9a514cf1d2</id_domanda>
         <data>2026-03-17</data>
         <ora>20:01:40</ora>
-        <utilita>
-          <valore id_utente="2" reputazione_Vot="11">3</valore>
-        </utilita>
-        <supporto>
-          <valore id_utente="2" reputazione_Vot="11">2</valore>
-        </supporto>
+        <utilita/>
+        <supporto/>
         <risposte>
-          <risposta id_prodotto="4" id_utente="2" segnalato="0">
+          <risposta id_prodotto="4" id_utente="3" segnalato="0">
             <id_risposta>69b9a55137aaa</id_risposta>
             <id_domanda>69b9a514cf1d2</id_domanda>
             <autore>mariorossi@gmail.com</autore>
             <data>2026-03-17</data>
             <ora>20:02:41</ora>
             <testo>La soundbar funziona perfettamente anche senza subwoofer esterno.</testo>
-            <utilita/>
-            <supporto/>
+            <utilita>
+              <valore id_utente="5" reputazione_Vot="4">3</valore>
+            </utilita>
+            <supporto>
+              <valore id_utente="5" reputazione_Vot="4">2</valore>
+            </supporto>
           </risposta>
         </risposte>
       </domanda>
     </domande>
     <recensioni>
-      <recensione id_prodotto="4" id_utente="4" segnalato="0">
+      <recensione id_prodotto="4" id_utente="5" segnalato="0">
         <autore>giulianeri@gmail.com</autore>
         <testo>Audio potente e pulito, migliora tantissimo rispetto alla TV.</testo>
         <data>2026-03-18</data>
         <ora>13:06:57</ora>
         <id_recensione>69ba9561b6e5b</id_recensione>
-        <utilita/>
-        <supporto/>
+        <utilita>
+          <valore id_utente="6" reputazione_Vot="3">2</valore>
+          <valore id_utente="2" reputazione_Vot="11">2</valore>
+        </utilita>
+        <supporto>
+          <valore id_utente="6" reputazione_Vot="3">1</valore>
+          <valore id_utente="2" reputazione_Vot="11">1</valore>
+        </supporto>
       </recensione>
     </recensioni>
   </prodotto>
@@ -361,16 +383,20 @@ Evviva le tv. Cordiali saluti
       </bonus_personalizzato>
     </sconti_bonus>
     <domande>
-      <domanda id_prodotto="7" id_utente="5" segnalato="0">
+      <domanda id_prodotto="7" id_utente="6" segnalato="0">
         <autore>luca@gmail.com</autore>
         <testo>È difficile da montare?</testo>
         <id_domanda>69b9e054d244b</id_domanda>
         <data>2026-03-18</data>
         <ora>00:14:28</ora>
-        <utilita/>
-        <supporto/>
+        <utilita>
+          <valore id_utente="2" reputazione_Vot="11">1</valore>
+        </utilita>
+        <supporto>
+          <valore id_utente="2" reputazione_Vot="11">2</valore>
+        </supporto>
         <risposte>
-          <risposta id_prodotto="7" id_utente="3" segnalato="0">
+          <risposta id_prodotto="7" id_utente="4" segnalato="0">
             <id_risposta>69b9e0a78904d</id_risposta>
             <id_domanda>69b9e054d244b</id_domanda>
             <autore>paoloverdi@gmail.com</autore>
@@ -378,13 +404,13 @@ Evviva le tv. Cordiali saluti
             <ora>00:15:51</ora>
             <testo>Il montaggio è semplice grazie al kit incluso.</testo>
             <utilita>
-              <valore id_utente="5" reputazione_Vot="4">2</valore>
+              <valore id_utente="6" reputazione_Vot="3">2</valore>
             </utilita>
             <supporto>
-              <valore id_utente="5" reputazione_Vot="4">2</valore>
+              <valore id_utente="6" reputazione_Vot="3">2</valore>
             </supporto>
           </risposta>
-          <risposta id_prodotto="7" id_utente="2" segnalato="0">
+          <risposta id_prodotto="7" id_utente="3" segnalato="0">
             <id_risposta>69ba9698c6fdb</id_risposta>
             <id_domanda>69b9e054d244b</id_domanda>
             <autore>mariorossi@gmail.com</autore>
@@ -392,17 +418,17 @@ Evviva le tv. Cordiali saluti
             <ora>13:12:08</ora>
             <testo>Il montaggio è semplicissimo, inoltre il supporto è compatibile con diverse dimensioni di TV.</testo>
             <utilita>
-              <valore id_utente="5" reputazione_Vot="4">2</valore>
+              <valore id_utente="6" reputazione_Vot="3">3</valore>
             </utilita>
             <supporto>
-              <valore id_utente="5" reputazione_Vot="4">1</valore>
+              <valore id_utente="6" reputazione_Vot="3">2</valore>
             </supporto>
           </risposta>
         </risposte>
       </domanda>
     </domande>
     <recensioni>
-      <recensione id_prodotto="7" id_utente="5" segnalato="0">
+      <recensione id_prodotto="7" id_utente="6" segnalato="0">
         <autore>luca@gmail.com</autore>
         <testo>Fa bene il suo lavoro, materiali solidi.</testo>
         <data>2026-03-18</data>

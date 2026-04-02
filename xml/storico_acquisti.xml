@@ -1,2 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<acquisti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="storico_acquisti.xsd"></acquisti>
+<acquisti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="storico_acquisti.xsd">
+  <acquisto id_utente="4">
+    <data>2026-04-01</data>
+    <ora>20:19:55</ora>
+    <id_prodotto>1</id_prodotto>
+    <nome_prodotto>Samsung Crystal UHD 50</nome_prodotto>
+    <prezzo_unitario>500.00</prezzo_unitario>
+    <quantita>1</quantita>
+    <prezzo_scontato>450.00</prezzo_scontato>
+    <bonus>9</bonus>
+    <prezzo_totale>450.00</prezzo_totale>
+  </acquisto>
+  <acquisto id_utente="4">
+    <data>2026-04-01</data>
+    <ora>20:20:12</ora>
+    <id_prodotto>8</id_prodotto>
+    <nome_prodotto>Vogel Supporto TV Orientabile</nome_prodotto>
+    <prezzo_unitario>79.00</prezzo_unitario>
+    <quantita>1</quantita>
+    <prezzo_scontato>79.00</prezzo_scontato>
+    <bonus>0</bonus>
+    <prezzo_totale>79.00</prezzo_totale>
+  </acquisto>
+  <acquisto id_utente="5">
+    <data>2026-04-01</data>
+    <ora>20:22:35</ora>
+    <id_prodotto>4</id_prodotto>
+    <nome_prodotto>Sony Soundbar HT-S100F</nome_prodotto>
+    <prezzo_unitario>129.25</prezzo_unitario>
+    <quantita>1</quantita>
+    <prezzo_scontato>122.79</prezzo_scontato>
+    <bonus>0</bonus>
+    <prezzo_totale>122.79</prezzo_totale>
+  </acquisto>
+  <acquisto id_utente="5">
+    <data>2026-04-01</data>
+    <ora>20:22:35</ora>
+    <id_prodotto>7</id_prodotto>
+    <nome_prodotto>Meliconi Supporto TV da parete Slim</nome_prodotto>
+    <prezzo_unitario>39.99</prezzo_unitario>
+    <quantita>1</quantita>
+    <prezzo_scontato>39.99</prezzo_scontato>
+    <bonus>0</bonus>
+    <prezzo_totale>39.99</prezzo_totale>
+  </acquisto>
+</acquisti>

@@ -65,12 +65,14 @@
 
 
     // Popolamento della tabella 'utenti'
-    $sql = "INSERT INTO $utenti_table_name (`id`,`nome`,`cognome`, `email`, `passwd`,`crediti`,`data_di_nascita`,`indirizzo_di_residenza`,`codice_fiscale`,`cellulare`,`cliente`,`ammin`,`gestore`,`reputazione`,`ban`,`data_registrazione`) VALUES
-    ('1','Davide','D\'Ascanio', 'davidedascanio@gmail.com', '" . password_hash('Davide1234!', PASSWORD_DEFAULT) . "','0', '2001-06-14', 'Via Muzio Clementi', 'FRNLNZ01H14H501Z','3339553001','0','1','0','11', '0','2022-06-14'),
-    ('2','Mario', 'Rossi', 'mariorossi@gmail.com', '" . password_hash('Mario1234!', PASSWORD_DEFAULT) . "','0', '2001-04-11','Via A.Stradivari 4', 'DLLFRC01D11H501P','3293321366','0','0','1','11','0','2022-06-14'),
-    ('3','Paolo','Verdi', 'paoloverdi@gmail.com', '" . password_hash('Paolo1234!', PASSWORD_DEFAULT) . "','0', '2001-06-14', 'Via Ugo La Malfa 4', 'FRNLNZ01H14H456D','3339553256','1','0','0','1', '0','2022-06-14'),
-    ('4','Giulia','Neri', 'giulianeri@gmail.com', '" . password_hash('Giulia1234!', PASSWORD_DEFAULT) . "','0', '2001-06-14', 'Via Caligola', 'FRNLNZ01H14H159L','3339553789','1','0','0','1', '0','2022-09-14'),
-    ('5','Luca','Paoli', 'luca@gmail.com', '" . password_hash('Luca1234!', PASSWORD_DEFAULT) . "','0', '2001-06-14', 'Via Andrea Doria', 'FRNLNZ01H14H753P','3339553123','1','0','0','1', '0','2023-04-14')";
+    $sql = "INSERT INTO $utenti_table_name (`id`,`nome`,`cognome`,`email`,`passwd`,`crediti`,`data_di_nascita`,`indirizzo_di_residenza`,`codice_fiscale`,`cellulare`,`cliente`,`ammin`,`gestore`,`reputazione`,`ban`,`data_registrazione`) VALUES
+    ('1', 'Davide', 'D\'Ascanio', 'davidedascanio@gmail.com', '" . password_hash('Davide1234!', PASSWORD_DEFAULT) . "','0','1998-06-14','Via Muzio Clementi','DSCDVD95H14H501R','3339553001','0','1','0','11','0','2022-01-14'),
+    ('2','Marco','Bianchi','marcobianchi@gmail.com', '" . password_hash('Marco1234!', PASSWORD_DEFAULT) . "','0','2000-03-22','Via Roma 10','BNCMRC00C22H501X','3381234567','0','0','1','11','0','2021-02-10'),
+    ('3','Mario','Rossi','mariorossi@gmail.com', '" . password_hash('Mario1234!', PASSWORD_DEFAULT) . "','0','1998-04-11','Via A.Stradivari 4','RSSMRA98D11H501K','3293321366','0','0','1','11','0','2022-06-22'),
+    ('4','Paolo','Verdi','paoloverdi@gmail.com', '" . password_hash('Paolo1234!', PASSWORD_DEFAULT) . "','0','2001-06-20','Via Ugo La Malfa 4','VRDPLA01H20H501Y','3339553256','1','0','0','1','0','2021-01-14'),
+    ('5','Giulia','Neri','giulianeri@gmail.com', '" . password_hash('Giulia1234!', PASSWORD_DEFAULT) . "','0','2003-03-15','Via Caligola','NREGLI03C55H501N','3472218934','1','0','0','1','0','2025-09-20'),
+    ('6','Luca','Paoli','luca@gmail.com', '" . password_hash('Luca1234!', PASSWORD_DEFAULT) . "','0','2002-07-20','Via Andrea Doria','PLALCU02L20H501W','3339553123','1','0','0','1','0','2022-04-03')";
+
 
 
     // Verifica popolamento tabella 'utenti'

@@ -29,6 +29,22 @@
         $dom->formatOutput = true;
         $dom->load($xmlFile);
 
+        // Controlla se questo cliente ha già segnalato questo contributo
+        $xpath = new DOMXPath($dom);
+        $esistente = $xpath->query(
+            "//segnalazione[@id_contributo='{$id_contributo}' 
+            and @autore_segnalazione='{$autore_segnalazione}']"
+        );
+
+        if ($esistente->length > 0) {
+            $_SESSION['errore_segnalazione'] = 'true';
+            if(isset($_POST['rec']) && $_POST['rec'] == 'rec'){
+                header("Location: ../php/lista_recensioni.php?id_prodotto=$id_prodotto&nome=$nome&tipologia=$tipologia");
+            } else {
+                header("Location: ../php/lista_domande.php?id_prodotto=$id_prodotto&nome=$nome&tipologia=$tipologia");
+            }
+            exit();
+        }
 
         $root = $dom->documentElement;
 

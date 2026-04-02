@@ -1,7 +1,7 @@
 <?php
     session_start();
     require_once('../res/funzioni.php');
-
+    
     // Verifica se il gestore è loggato
     if (isset($_SESSION['id'])) {
 
@@ -84,20 +84,43 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <script>
         function toggleData(select) {
-            // Trova il campo data_riferimento dentro lo stesso form del select
+            // La funzione viene chiamata passando il <select> (tramite "this")
+            // Serve a mostrare o nascondere il campo data_riferimento in base al criterio scelto
+
+            // Recupera l'input con name="data_riferimento" all'interno dello stesso form del select
             var dataInput = select.form.querySelector('input[name="data_riferimento"]');
 
+            // Recupera la label associata a quell'input (for="data_riferimento")
             var dataLabel = select.form.querySelector('label[for="data_riferimento"]');
 
+            // Controlla quale opzione è stata selezionata
             if (select.value === 'crediti_da_data') {
+
+                // Se il criterio è "crediti_da_data":
+                // → mostra il campo input della data
                 dataInput.style.display = 'inline';
+
+                // → mostra anche la label della data
                 dataLabel.style.display = 'inline';
+
+                // → rende il campo obbligatorio
                 dataInput.required = true;
             } else {
+
+                // Se viene selezionato qualsiasi altro criterio:
+
+                // → nasconde il campo input
                 dataInput.style.display = 'none';
+
+                // → nasconde la label
                 dataLabel.style.display = 'none';
+
+                // → rende il campo NON obbligatorio
                 dataInput.required = false;
-                dataInput.value = '';   // pulisce la data se cambia criterio
+
+                // → svuota il valore della data se cambia criterio
+                // (evita di inviare dati non coerenti con il criterio scelto)
+                dataInput.value = ''; 
             }
         }
     </script>
@@ -198,7 +221,7 @@
                             <label>Soglia:</label>
                             <input class="input" type="number" name="soglia" min="0" step="1" required><br>
                             <label for="data_riferimento">Data di riferimento:</label>
-                            <input class="input" type="date" id="data_riferimento" name="data_riferimento"><br>
+                            <input class="input" type="date" name="data_riferimento"><br>
                             <button class="btn" type="submit">Attiva</button>
                         </form>
                     <?php } ?>
@@ -274,7 +297,7 @@
                             <label>Soglia:</label>
                             <input class="input" type="number" name="soglia" min="0" step="1" required><br>
                             <label for="data_riferimento">Data di riferimento:</label>
-                            <input class="input" type="date" id="data_riferimento" name="data_riferimento"><br>
+                            <input class="input" type="date" name="data_riferimento"><br>
                             <button class="btn" type="submit">Attiva</button>
                         </form>
                     <?php } ?>

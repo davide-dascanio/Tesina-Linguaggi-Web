@@ -109,6 +109,7 @@
                             echo nl2br("<td>$testoSegnalazione</td>");
                             echo '<td>';
                             echo '<form action="../res/approva_segnalazione.php" method="post">';
+                            echo "<input type='hidden' name='autore_segnalazione' value='$autoreSegnalazione'>";
                             echo "<input type='hidden' name='id_contributo' value='$idContributo'>";
                             echo "<input type='hidden' name='id_prodotto' value='$idProdotto'>";
                             echo '<button class="done" type="submit" name="action" value="Approva">';

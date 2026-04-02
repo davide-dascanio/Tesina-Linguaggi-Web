@@ -35,22 +35,23 @@
     <body>
         <?php
             require_once('../res/header.php');
+        
+            // Visualizza i messaggi di successo o errore
+            if (isset($_SESSION['successo_richiesta_approvata']) && $_SESSION['successo_richiesta_approvata'] == 'true') {
+                echo '<h2 id="successo">Richiesta approvata con successo... I crediti sono stati aggiunti all\'account di "' . $_SESSION['email'] . '"</h2>';
+                unset($_SESSION['successo_richiesta_approvata']);
+            }
+            if (isset($_SESSION['successo_richiesta_rifiutata']) && $_SESSION['successo_richiesta_rifiutata'] == 'true') {
+                echo '<h2 id="successo">Richiesta rifiutata con successo!!!</h2>';
+                unset($_SESSION['successo_richiesta_rifiutata']);
+            }
+            if (isset($_SESSION['fallimento_richiesta']) && $_SESSION['fallimento_richiesta'] == 'true') {
+                echo '<h2>Errore nell\'aggiornamento dei crediti dell\'utente nel database: ' . $connessione->error . '</h2>';
+                unset($_SESSION['fallimento_richiesta']);
+            }
         ?>
         <div class="contenitore">
             <?php
-                // Visualizza i messaggi di successo o errore
-                if (isset($_SESSION['successo_richiesta_approvata']) && $_SESSION['successo_richiesta_approvata'] == 'true') {
-                    echo '<h2 id="successo">Richiesta approvata con successo... I crediti sono stati aggiunti all\'account di "' . $_SESSION['email'] . '"</h2>';
-                    unset($_SESSION['successo_richiesta_approvata']);
-                }
-                if (isset($_SESSION['successo_richiesta_rifiutata']) && $_SESSION['successo_richiesta_rifiutata'] == 'true') {
-                    echo '<h2 id="successo">Richiesta rifiutata con successo!!!</h2>';
-                    unset($_SESSION['successo_richiesta_rifiutata']);
-                }
-                if (isset($_SESSION['fallimento_richiesta']) && $_SESSION['fallimento_richiesta'] == 'true') {
-                    echo '<h2>Errore nell\'aggiornamento dei crediti dell\'utente nel database: ' . $connessione->error . '</h2>';
-                    unset($_SESSION['fallimento_richiesta']);
-                }
 
 
                 // Carica il file XML
